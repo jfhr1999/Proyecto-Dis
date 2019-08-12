@@ -5,7 +5,7 @@
     <div class="jumbotron" style="background-color: #150E38; color: #FFFFFF; font-size: large; font-family: Arial, Helvetica, sans-serif" >
         
     Sistema de Egresados<br />
-    Área Académica de Gerencia de Proyectos<img alt="" src="Images/logoTec.JPG" style="width: 224px; height: 65px; position: relative; top: -19px; left: 437px;" /></div>
+    Área Académica de Gerencia de Proyectos<img alt="" src="Images/logoTec.JPG" style="width: 224px; height: 65px; position: relative; top: -19px; left: 438px;" /></div>
 
     <div class="row">
         <div class="col-md-4">
