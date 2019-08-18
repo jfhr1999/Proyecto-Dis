@@ -4,7 +4,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!--/TODO: cambiar caracteres de password a invisible y alargar cuadro para meter guia de cedula -->
 
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     
     <div class="row">
         <div class="col-md-12">
@@ -19,7 +21,7 @@
                 <div class="wrapper fadeInDown">
                     <div id="formContent" style=" width: 900px;height: 300px; ">
  
-                        <div class="fadeIn first" style="font-size: large">
+                        <div class="fadeIn first" style="font-size: x-large">
                             Registrarse
                         </div>
 
