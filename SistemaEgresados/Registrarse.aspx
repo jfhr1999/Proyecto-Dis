@@ -9,14 +9,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     
     <div class="row">
-        <div class="col-md-12">
-        </div>
      
         <div class="col-md-4">
         </div>
     
         <div class="col-md-4">
-            
+            <br /><br /><br />
+
             <link href="Content/LoginStyle.css" rel="stylesheet" type="text/css" />
                 <div class="wrapper fadeInDown">
                     <div id="formContent" style=" width: 900px;height: 300px; ">
