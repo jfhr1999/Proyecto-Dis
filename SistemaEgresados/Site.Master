@@ -36,8 +36,8 @@
 <nav class="navbar-fixed-top" style="background-color: #150E38">
   <div class="container-fluid">
       <ul class="navbar-right"> <!--/A la derecha del navbar -->
-          <li><a href="#" style="color: #FFFFFF"><span class="glyphicon glyphicon-user" style="color: #FFFFFF"></span> Registrarse</a></li>
-          <li><a href="#" style="color: #FFFFFF"><span class="glyphicon glyphicon-log-in" style="color: #FFFFFF"></span> Salir</a></li>
+          <li><a href="Registrarse.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-user" style="color: #FFFFFF"></span> Registrarse</a></li>
+          <li><a href="Default.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-log-in" style="color: #FFFFFF"></span> Salir</a></li>
       </ul>
       <div class ="navbar-left" style="font-family: Arial, Helvetica, sans-serif; font-size: large; color: #FFFFFF"> <!--/A la izq del navbar -->
           <asp:Label ID="Label1" runat="server" Text="Sistema de graduados </br> Maestría en Gerencia de Proyectos"></asp:Label>
