@@ -8,12 +8,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     
-    <div class="row">
+    <div class="row" style="justify-content:center">
         
-        
-        
-        <div class="col-md-4">
-        </div>
     
         <div class="col-md-4">
             <br /><br /><br />
@@ -43,8 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-     </div>
+        
     
 
 </asp:Content>

@@ -73,12 +73,7 @@
              <div class="tab-pane fade show active" id="Cedula" role="tabpanel" aria-labelledby="Cedula">
                 <asp:TextBox ID="cedula" placeholder="Escriba la cédula" runat="server" ></asp:TextBox>
                 <a href="#" ><span class="glyphicon glyphicon-search" style="color: #150E38"></span></a>
-                 <div class="table-responsive">
-                    <table class="table">
-
-    
-                    </table>
-                </div>
+                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
             </div>
              <div class="tab-pane fade" id="Filtro" role="tabpanel" aria-labelledby="Filtro">
                  <asp:TextBox ID="TextBox2" placeholder="mail" runat="server" ></asp:TextBox>
