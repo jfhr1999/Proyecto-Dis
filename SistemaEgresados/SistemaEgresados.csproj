@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrar Usuarios.aspx" />
+    <Content Include="ConsultarDatos.aspx" />
     <Content Include="Consultas.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -113,9 +114,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\CustomSelectBox.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EditarDatos.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Llamadas.aspx" />
+    <Content Include="MenuConsultor.aspx" />
     <Content Include="Registrarse.aspx" />
     <Content Include="Images\loginIcon.JPG" />
     <Content Include="Images\logoTec.JPG" />
@@ -193,6 +196,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ConsultarDatos.aspx.cs">
+      <DependentUpon>ConsultarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultarDatos.aspx.designer.cs">
+      <DependentUpon>ConsultarDatos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas.aspx.cs">
       <DependentUpon>Consultas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -207,6 +217,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditarDatos.aspx.cs">
+      <DependentUpon>EditarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarDatos.aspx.designer.cs">
+      <DependentUpon>EditarDatos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -216,6 +233,13 @@
     </Compile>
     <Compile Include="Llamadas.aspx.designer.cs">
       <DependentUpon>Llamadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuConsultor.aspx.cs">
+      <DependentUpon>MenuConsultor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuConsultor.aspx.designer.cs">
+      <DependentUpon>MenuConsultor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registrarse.aspx.cs">
