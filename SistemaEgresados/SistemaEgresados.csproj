@@ -117,6 +117,8 @@
     <Content Include="EditarDatos.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\lupa.png" />
     <Content Include="Llamadas.aspx" />
     <Content Include="MenuConsultor.aspx" />
     <Content Include="Registrarse.aspx" />

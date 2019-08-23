@@ -10,7 +10,8 @@
         <div class="row">
             <div class="col">
                 <br /><br /><br /><br />
-                <asp:Label id="Label1" Text="Información Básica" runat="server" Width="300" Font-Size="XLarge"/>
+                <asp:Label id="Label1" Text="Información Básica" runat="server" Width="210" Font-Size="XLarge"/>
+                <img src="Images/edit.png" height="18" width="45"/>
             </div>
         </div>
     </div>
@@ -51,7 +52,8 @@
     <div class="container"> 
         <div class="row">
             <div class="col">
-                <asp:Label id="Label2" Text="Información del Contacto" runat="server" Width="300" Font-Size="XLarge"/>
+                <asp:Label id="Label2" Text="Información del Contacto" runat="server" Width="280" Font-Size="XLarge"/>
+                <img src="Images/edit.png" height="18" width="45"/>
             </div>
         </div>
     </div>
@@ -75,7 +77,8 @@
     <div class="container"> 
         <div class="row">
             <div class="col">
-                <asp:Label id="Label3" Text="Información de Residencia" runat="server" Width="300" Font-Size="XLarge"/>
+                <asp:Label id="Label3" Text="Información de Residencia" runat="server" Width="290" Font-Size="XLarge"/>
+                <img src="Images/edit.png" height="18" width="45"/>
             </div>
         </div>
     </div>
@@ -103,5 +106,18 @@
             </div>
         </div>
     </div>
+
+    <hr/>
+
+    <div class="container"> 
+        <div class="row">
+            <div class="col">
+                <asp:Label id="Label4" Text="Ofertas de Interés" runat="server" Width="300" Font-Size="XLarge"/>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <a href="#" class="btn btn-primary btn-lg float-right" role="button" aria-pressed="true">Guardar Datos</a>
 
 </asp:Content>
