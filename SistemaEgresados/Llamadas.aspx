@@ -1,5 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Llamadas.aspx.cs" Inherits="SistemaEgresados.Llamadas" %>
+﻿<%@ Page Title="" Language="C#" Async="true" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Llamadas.aspx.cs" Inherits="SistemaEgresados.Llamadas" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
@@ -13,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
     
 
+
     
 
 <br />
@@ -21,12 +25,14 @@
 <br />
 <br />
 <div class="container">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A4CEA1_graduadosmgpConnectionString %>" SelectCommand="SELECT Contacto$.* FROM Contacto$"></asp:SqlDataSource>
      <h1 align="center">Registro de llamadas</h1>  
      <hr />
-      <div class="row" style="justify-content:center;s"  >
+      <div class="row" style="justify-content:center"  >
            
           <div style="background-color:#f5f5f5; padding:130px;">
              Digite la cédula
+              
               <br />
                <asp:TextBox ID="cedula" runat="server" ></asp:TextBox>
               
@@ -58,8 +64,7 @@
                       <textarea class="form-control" placeholder="Comentarios..."></textarea>
                 </div>
                 <br />
-                <input type="submit" value="Enviar" style="background-color: #150E38; color: #FFFFFF;"/>
-
+                <asp:Button ID="sendBTN" type="submit"  OnClick="conn2" runat="server" CausesValidation="False" Text="Enviar" style="background-color: #150E38; color: #FFFFFF;" />
                 
                 
             </div>
@@ -67,6 +72,8 @@
 
         </div>
 </div>
+
+
 <script type="text/javascript">
     $(function () {
         $('#datetimepicker1').datetimepicker();
