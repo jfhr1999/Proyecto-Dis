@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -33,9 +34,22 @@ namespace SistemaEgresados
                 System.Diagnostics.Debug.WriteLine(dataReader.GetValue(0) + "</br>");
 
             }
-            //exec.ExecuteNonQuery();
-            //System.Diagnostics.Debug.WriteLine(a.ToString());
+            
             myConnection.Close();
+        }
+        public void test(object sender, EventArgs e)
+        {
+            string s = CensorConnectionString("Data Source=SQL5045.site4now.net;Initial Catalog=DB_A4CEA1_graduadosmgp;User Id=DB_A4CEA1_graduadosmgp_admin;Password=graduados19;");
+            System.Diagnostics.Debug.WriteLine(s);
+        }
+        public static string CensorConnectionString(string connectionString)
+        {
+            var builder = new DbConnectionStringBuilder() { ConnectionString = connectionString };
+            if (builder.ContainsKey("Password"))
+            {
+                builder["Password"] = "*****";
+            }
+            return builder.ToString();
         }
 
 
