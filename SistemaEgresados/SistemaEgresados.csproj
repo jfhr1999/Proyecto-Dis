@@ -212,6 +212,7 @@
     <Content Include="MenuAdmin.aspx" />
     <Content Include="MenuConsultor.aspx" />
     <Content Include="MenuGraduado.aspx" />
+    <Content Include="RecuperarCuenta.aspx" />
     <Content Include="Registrarse.aspx" />
     <Content Include="Images\loginIcon.JPG" />
     <Content Include="Images\logoTec.JPG" />
@@ -349,6 +350,13 @@
       <DependentUpon>MenuGraduado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecuperarCuenta.aspx.cs">
+      <DependentUpon>RecuperarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarCuenta.aspx.designer.cs">
+      <DependentUpon>RecuperarCuenta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registrarse.aspx.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

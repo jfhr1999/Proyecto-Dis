@@ -10,33 +10,24 @@
 namespace SistemaEgresados {
     
     
-    public partial class _Default {
+    public partial class RecuperarCuenta {
         
         /// <summary>
-        /// LoginBox control.
+        /// mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginBox;
+        protected global::System.Web.UI.WebControls.TextBox mail;
         
         /// <summary>
-        /// passBox control.
+        /// send control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passBox;
-        
-        /// <summary>
-        /// sendBTN control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sendBTN;
+        protected global::System.Web.UI.WebControls.Button send;
     }
 }

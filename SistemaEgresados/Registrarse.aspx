@@ -28,8 +28,8 @@
                     <form>
                         
                         <asp:TextBox ID="mail" placeholder="Correo" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="password" autocomplete="off" placeholder="Contraseña" runat="server" ></asp:TextBox> <!-- /Si pongo TextMode=password se desmadra el text box -->
                         <asp:TextBox ID="ID" placeholder="Identificación" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="password" type="password" autocomplete="off" placeholder="Contraseña" runat="server" ></asp:TextBox>
                         <asp:Button ID="send" type="submit"  OnClick="Register_click" runat="server" CausesValidation="False" Text="Registrar" style="background-color: #150E38; color: #FFFFFF;" />
                     </form>
                     <div runat="server" id="pop1" class="alertBox" Visible="false">
