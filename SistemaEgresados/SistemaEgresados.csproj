@@ -191,6 +191,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActualizarTablas.aspx" />
     <Content Include="Administrar Usuarios.aspx" />
     <Content Include="ConsultarDatos.aspx" />
     <Content Include="Consultas.aspx" />
@@ -207,8 +208,13 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\edit.png" />
+    <Content Include="Images\email.png" />
+    <Content Include="Images\envelope-closed-8x.png" />
     <Content Include="Images\lupa.png" />
+    <Content Include="Images\person-8x.png" />
+    <Content Include="Images\user_icon.png" />
     <Content Include="Llamadas.aspx" />
+    <Content Include="ManejarOfertasCursos.aspx" />
     <Content Include="MenuAdmin.aspx" />
     <Content Include="MenuConsultor.aspx" />
     <Content Include="MenuGraduado.aspx" />
@@ -281,6 +287,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarTablas.aspx.cs">
+      <DependentUpon>ActualizarTablas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarTablas.aspx.designer.cs">
+      <DependentUpon>ActualizarTablas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrar Usuarios.aspx.cs">
       <DependentUpon>Administrar Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,6 +340,13 @@
     </Compile>
     <Compile Include="Llamadas.aspx.designer.cs">
       <DependentUpon>Llamadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManejarOfertasCursos.aspx.cs">
+      <DependentUpon>ManejarOfertasCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManejarOfertasCursos.aspx.designer.cs">
+      <DependentUpon>ManejarOfertasCursos.aspx</DependentUpon>
     </Compile>
     <Compile Include="MenuAdmin.aspx.cs">
       <DependentUpon>MenuAdmin.aspx</DependentUpon>
