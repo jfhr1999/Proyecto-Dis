@@ -206,6 +206,7 @@
     <Content Include="Content\CustomSelectBox.css" />
     <Content Include="Default.aspx" />
     <Content Include="EditarDatos.aspx" />
+    <Content Include="EnvioCorreo.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\edit.png" />
@@ -331,6 +332,13 @@
     </Compile>
     <Compile Include="EditarDatos.aspx.designer.cs">
       <DependentUpon>EditarDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnvioCorreo.aspx.cs">
+      <DependentUpon>EnvioCorreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnvioCorreo.aspx.designer.cs">
+      <DependentUpon>EnvioCorreo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
