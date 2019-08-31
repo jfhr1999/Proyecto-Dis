@@ -23,7 +23,7 @@
     <br />
     <div class="text-center">
         <img src="Images/person-8x.png" height="18" width="30"/>
-        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/AdministrarUsuarios.aspx'">Administrar usuarios</a>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/Administrar Usuarios.aspx'">Administrar usuarios</a>
     </div>
     <br />
     <div class="text-center">
