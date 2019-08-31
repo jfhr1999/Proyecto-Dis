@@ -35,15 +35,46 @@
 <body>
 <nav class="navbar-fixed-top" style="background-color: #150E38">
   <div class="container-fluid">
-      <ul class="navbar-right"> <!--/A la derecha del navbar -->
-          <li><a href="Registrarse.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-user" style="color: #FFFFFF"></span> Registrarse</a></li>
-          <li><a href="Default.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-log-in" style="color: #FFFFFF"></span> Salir</a></li>
-      </ul>
+      <%--Elementos de la izquierda del navbar--%>
       <div class ="navbar-left" style="font-family: Arial, Helvetica, sans-serif; font-size: large; color: #FFFFFF"> <!--/A la izq del navbar -->
-          <asp:Label ID="Label1" runat="server" Text="Sistema de graduados </br> Maestría en Gerencia de Proyectos"></asp:Label>
-        
-          <img alt="" class="auto-style2" src="Images/logoTec.JPG" style="position: relative" /></div>
+          <div class="row">
+              <div class="col-12 mt-3">
+                <asp:Label ID="LabelSistemaGraduados" runat="server" Text="Sistema de graduados"></asp:Label>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 mt-2 mb-3">
+                  <asp:Label ID="LabelMaestriaGerenciaProyectos" runat="server" Text="Maestría en Gerencia de Proyectos"></asp:Label>
+              </div>
+          </div>
+
+        </div>
     
+      <%--Elementos del lado derecho del navbar--%>
+      <div class="navbar-right">
+          <div class="row justify-content-end">
+              <%--Imagen--%>
+              <div class="col-12 col-xs-9 col-sm-8">
+                <img alt="" class="auto-style2" src="Images/logoTec.JPG" />
+              </div>
+              
+              <%--Iconos de registrarse y salir--%>
+              <div class="col-12 col-xs-3 col-sm-4">
+                  <div class="row justify-content-end">
+                      <%--Registrarse--%>
+                      <div class="col-12 mt-3 mb-1">
+                        <a href="Registrarse.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-user" style="color: #FFFFFF"></span> Registrarse</a>
+                      </div>
+                      <%--Salir--%>
+                      <div class="col-12 mb-3">
+                        <a href="Default.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-log-in" style="color: #FFFFFF"></span> Salir</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+
   </div>
   <!--/.container-fluid -->
 </nav>

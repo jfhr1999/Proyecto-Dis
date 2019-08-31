@@ -64,7 +64,7 @@
                       <textarea class="form-control" placeholder="Comentarios..."></textarea>
                 </div>
                 <br />
-                <asp:Button ID="sendBTN" type="submit"  OnClick="test" runat="server" CausesValidation="False" Text="Enviar" style="background-color: #150E38; color: #FFFFFF;" />
+                <asp:Button ID="sendBTN" class="btn btn-dark" type="submit"  OnClick="test" runat="server" CausesValidation="False" Text="Enviar" style="background-color: #150E38; color: #FFFFFF;" />
                 
                 
             </div>
