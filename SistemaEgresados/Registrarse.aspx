@@ -32,34 +32,15 @@
                         <asp:TextBox ID="password" type="password" autocomplete="off" placeholder="Contraseña" runat="server" ></asp:TextBox>
                         <asp:Button ID="send" type="submit"  OnClick="Register_click" runat="server" CausesValidation="False" Text="Registrar" style="background-color: #150E38; color: #FFFFFF;" />
                     </form>
-                    <div runat="server" id="pop1" class="alertBox" Visible="false">
-                        <div runat="server" id="msg1"></div>
-                        <button onclick="Default.aspx">Ok</button>
-                    </div>
-                    <div runat="server" id="pop2" class="alertBox" Visible="false">
-                        <div runat="server" id="msg2"></div>
-                        <button onclick="closeAlert.call(this, event)">Ok</button>
-                    </div>
-                    <div runat="server" id="pop3" class="alertBox" Visible="false">
-                        <div runat="server" id="msg3"></div>
-                        <button onclick="closeAlert.call(this, event)">Ok</button>
-                    </div>
-                    <div runat="server" id="pop4" class="alertBox" Visible="false">
-                        <div runat="server" id="msg4"></div>
-                        <button onclick="closeAlert.call(this, event)">Ok</button>
-                    </div>
-                    <div runat="server" id="pop5" class="alertBox" Visible="false">
-                        <div runat="server" id="msg5"></div>
-                        <button onclick="closeAlert.call(this, event)">Ok</button>
-                    </div>
+                    
                     
       
 
-                </div>
+                    </div>
                 </div>
             </div>
             <!-- Central Modal Medium Danger -->
-            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
                 <!--Content-->
@@ -81,7 +62,7 @@
               </div>
             </div>
  
-            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
+            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
                 <!--Content-->
@@ -103,7 +84,7 @@
               </div>
             </div>
 
-            <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3"
+            <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
                 <!--Content-->
@@ -125,7 +106,7 @@
               </div>
             </div>
             
-            <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4"
+            <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
                 <!--Content-->
@@ -147,7 +128,7 @@
               </div>
             </div>
             
-            <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4"
+            <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
                 <!--Content-->
@@ -169,7 +150,7 @@
               </div>
             </div>
 
-            <div class="modal fade" id="modal1" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5"
+            <div class="modal fade" id="modal1" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
                 <!--Content-->

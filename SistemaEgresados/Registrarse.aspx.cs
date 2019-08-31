@@ -19,59 +19,53 @@ namespace SistemaEgresados
         }
         protected void Register_click(object sender, EventArgs e)
         {
-            if (IsNumeric(ID.Text))
+            if (password.Text.Length >= 8)
             {
-                if (password.Text.Length >= 8)
+                if (validarRegistroUnico(ID.Text))
                 {
-                    if (validarRegistroUnico(ID.Text))
+                    if (validarCorreo(mail.Text))
                     {
-                        if (validarCorreo(mail.Text))
+                        if (validarCedula(ID.Text))
                         {
-                            if (validarCedula(ID.Text))
-                            {
-                                SqlCommand cmd = new SqlCommand("registrarUsuario", conn);                     //usa el sp
-                                cmd.CommandType = CommandType.StoredProcedure;
-                                cmd.Parameters.Add("@correo", SqlDbType.VarChar).Value = mail.Text;
-                                cmd.Parameters.Add("@passw", SqlDbType.VarChar).Value = password.Text;
-                                cmd.Parameters.Add("@estadoSesion", SqlDbType.Bit).Value = 0;
-                                cmd.Parameters.Add("@identificacion", SqlDbType.Float).Value = ID.Text;
-                                cmd.Parameters.Add("@rol", SqlDbType.VarChar).Value = "graduado";
+                            SqlCommand cmd = new SqlCommand("registrarUsuario", conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.Add("@correo", SqlDbType.VarChar).Value = mail.Text;
+                            cmd.Parameters.Add("@passw", SqlDbType.VarChar).Value = password.Text;
+                            cmd.Parameters.Add("@estadoSesion", SqlDbType.Bit).Value = 0;
+                            cmd.Parameters.Add("@identificacion", SqlDbType.Float).Value = ID.Text;
+                            cmd.Parameters.Add("@rol", SqlDbType.VarChar).Value = "graduado";
 
-                                conn.Open();
-                                cmd.ExecuteNonQuery();
-                                conn.Close();
-                                MessageBoxShow(1);
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBoxShow(1);
                                 
                                 
-                            }
-                            else
-                            {
-                                MessageBoxShow(3);
-                            }
                         }
                         else
                         {
-                            MessageBoxShow(2);
+                            MessageBoxShow(3);
                         }
                     }
                     else
                     {
-                        MessageBoxShow(6);
+                        MessageBoxShow(2);
                     }
                 }
                 else
                 {
-                    MessageBoxShow(4);
+                    MessageBoxShow(6);
                 }
             }
             else
             {
-                MessageBoxShow(5);
+                MessageBoxShow(4);
             }
+            
             
         }
 
-        public bool validarCorreo(string email)
+        public static bool validarCorreo(string email)
         {
             String expresion;
             expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
@@ -96,7 +90,7 @@ namespace SistemaEgresados
             //Here we declare the parameter which we have to use in our application  
             SqlCommand cmd = new SqlCommand("validarCedula", conn);                     //usa el sp
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = ID.Text;
+            cmd.Parameters.Add("@cedula", SqlDbType.NVarChar).Value = ID.Text;
             conn.Open();
             var rol = "";
             SqlDataReader rdr = cmd.ExecuteReader();          //solo para agarrar un output del sp
@@ -121,7 +115,7 @@ namespace SistemaEgresados
             //Here we declare the parameter which we have to use in our application  
             SqlCommand cmd = new SqlCommand("validarRegistroUnico", conn);                     //usa el sp
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = ID.Text;
+            cmd.Parameters.Add("@cedula", SqlDbType.NVarChar).Value = ID.Text;
             conn.Open();
             var rol = "";
             SqlDataReader rdr = cmd.ExecuteReader();          //solo para agarrar un output del sp

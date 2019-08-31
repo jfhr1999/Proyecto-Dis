@@ -32,7 +32,6 @@
            
           <div style="background-color:#f5f5f5; padding:130px;">
              Digite la cédula
-              data source=SQL5045.site4now.net;initial catalog=DB_A4CEA1_graduadosmgp;user id=DB_A4CEA1_graduadosmgp_admin;password=*****
               <br />
                <asp:TextBox ID="cedula" runat="server" ></asp:TextBox>
               
@@ -64,7 +63,7 @@
                       <textarea class="form-control" placeholder="Comentarios..."></textarea>
                 </div>
                 <br />
-                <asp:Button ID="sendBTN" type="submit"  OnClick="test" runat="server" CausesValidation="False" Text="Enviar" style="background-color: #150E38; color: #FFFFFF;" />
+                <asp:Button ID="sendBTN" type="submit" runat="server" CausesValidation="False" Text="Enviar" style="background-color: #150E38; color: #FFFFFF;" />
                 
                 
             </div>
