@@ -26,7 +26,6 @@ namespace SistemaEgresados
         {
             
             
-            
             //Here we declare the parameter which we have to use in our application  
             SqlCommand cmd = new SqlCommand("iniciarSesion", conn);                     //usa el sp
             cmd.CommandType = CommandType.StoredProcedure;
@@ -43,6 +42,8 @@ namespace SistemaEgresados
             rdr.Close();
             conn.Close();
 
+            guardarUsuario(LoginBox.Text, passBox.Text); //almacena en variable global la identificacion
+
             if (rol.Equals("admin"))                //Redirect de acuerdo al resultado
             {
                 Response.Redirect("MenuAdmin.aspx");
@@ -57,9 +58,28 @@ namespace SistemaEgresados
             }
 
         }
-        
-        
-       
+
+        public void guardarUsuario(string correo, string password)
+        {
+            SqlCommand cmd = new SqlCommand("guardarIdentificacion", conn);                     //usa el sp
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@correo", SqlDbType.VarChar).Value = correo;       //Agrega parametros
+            cmd.Parameters.Add("@passw", SqlDbType.VarChar).Value = password;
+            conn.Open();
+            var ident = "";
+            SqlDataReader rdr = cmd.ExecuteReader();                //ejecuta sp
+            while (rdr.Read())
+            {
+                ident = rdr.GetValue(0).ToString();               //usar solo si se ocupa tomar un output
+            }
+
+            Session["UserActual"] = ident;               //Variable global
+            System.Diagnostics.Debug.WriteLine("Usuario Actual: ",Session["UserActual"].ToString());
+
+
+            rdr.Close();
+            conn.Close();
+        }
         
 
     }
