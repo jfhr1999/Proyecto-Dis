@@ -19,52 +19,62 @@
 
     
 
-<br />
-<br />
-<br />
-<br />
-<br />
+
+
 <div class="container">
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_A4CEA1_graduadosmgpConnectionString %>" SelectCommand="SELECT Contacto$.* FROM Contacto$"></asp:SqlDataSource>
-     <h1 align="center">Registro de llamadas</h1>  
-     <hr />
+      
       <div class="row" style="justify-content:center"  >
            
-          <div style="background-color:#f5f5f5; padding:130px;">
+          <div style="background-color:#f5f5f5; padding:100px;">
+             <h1 >Registro de llamadas</h1> 
+             <br />
              Digite la cédula
               <br />
                <asp:TextBox ID="cedula" runat="server" ></asp:TextBox>
               
-               
+              
                 <div class="form-group">
-                     <br />
+                    <br />
                     Fecha de llamada
-                    <div class='input-group date' id='datetimepicker1'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
+                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                    
                 </div>
-              Motivo
-               <div class="select"> 
+                Motivo
+                <div class="select"> 
                    
-                    <select name="slct" id="slct"> 
-                        
-                        <option value="1">Actualizar datos</option> 
-                        <option value="2">Ofrecer cursos</option> 
-                        <option value="3">Otro</option> 
-                         
-                    </select> 
+                    <asp:DropDownList ID="DropDownList1" runat="server" >  
+                    <asp:ListItem Value="Actualizar datos">Actualizar datos</asp:ListItem>  
+                    <asp:ListItem Value="Ofrecer cursos">Ofrecer cursos</asp:ListItem>  
+                    <asp:ListItem Value="Otro">Otro</asp:ListItem>  
+                    </asp:DropDownList>
                 </div> 
                 
                 <div class="input-group">
                     <br />
-                      <textarea class="form-control" placeholder="Comentarios..."></textarea>
+                    <asp:TextBox id="TextArea1" TextMode="multiline" placeholder="Comentarios..." Columns="50" Rows="5" runat="server" ></asp:TextBox>
                 </div>
                 <br />
-                <asp:Button ID="sendBTN" type="submit" runat="server" CausesValidation="False" Text="Enviar" style="background-color: #150E38; color: #FFFFFF;" />
-                
+                <asp:Button ID="sendBTN" type="submit" runat="server" OnClick="saveCall" CausesValidation="False" Text="Enviar" style="background-color: #150E38; color: #FFFFFF;" />
+                <div class="modal fade" id="modal1" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-notify modal-danger" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+                      <!--Header-->
+                      <div class="modal-header" style ="background-color:#01C851; color: #FFFFFF; font-family: 'Arial Black';">
+                        <p class="heading lead">Llamada registrada!</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>                      
+
+                      </div>
+                      <!--Body-->
+                      <div class="modal-body" >
+                        <div class="fa fa-check-circle fa-3x" style="color:#01C851;text-align:center;" href="Default.aspx" runat="server"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
             </div>
           
@@ -76,6 +86,16 @@
 <script type="text/javascript">
     $(function () {
         $('#datetimepicker1').datetimepicker();
+        
     });
+    function openModal1() {
+        $('#modal1').modal('show');
+    }
+
+   
+    
+
+   
+    
 </script>
 </asp:Content>
