@@ -31,7 +31,7 @@
              Digite la cédula
               <br />
                <asp:TextBox ID="cedula" runat="server" ></asp:TextBox>
-              
+                
               
                 <div class="form-group">
                     <br />
@@ -42,12 +42,17 @@
                 Motivo
                 <div class="select"> 
                    
-                    <asp:DropDownList ID="DropDownList1" runat="server" >  
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList_Changed">  
                     <asp:ListItem Value="Actualizar datos">Actualizar datos</asp:ListItem>  
-                    <asp:ListItem Value="Ofrecer cursos">Ofrecer cursos</asp:ListItem>  
+                    <asp:ListItem Value="Ofrecer">Ofrecer cursos</asp:ListItem>  
                     <asp:ListItem Value="Otro">Otro</asp:ListItem>  
                     </asp:DropDownList>
                 </div> 
+                <br />
+                 <asp:Panel ID="pnlTextBox" runat="server" Visible="false">
+                    Codigo de curso:
+                    <asp:TextBox ID="curso" runat="server" />
+                </asp:Panel>
                 
                 <div class="input-group">
                     <br />

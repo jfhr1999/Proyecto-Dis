@@ -10,69 +10,69 @@
 namespace SistemaEgresados {
     
     
-    public partial class Llamadas {
+    public partial class GestionCurso {
         
         /// <summary>
-        /// cedula control.
+        /// codigo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cedula;
+        protected global::System.Web.UI.WebControls.TextBox codigo;
         
         /// <summary>
-        /// Calendar1 control.
+        /// nombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.TextBox nombre;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// precio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox precio;
         
         /// <summary>
-        /// pnlTextBox control.
+        /// comentarios control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTextBox;
+        protected global::System.Web.UI.WebControls.TextBox comentarios;
         
         /// <summary>
-        /// curso control.
+        /// periodo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox curso;
+        protected global::System.Web.UI.WebControls.TextBox periodo;
         
         /// <summary>
-        /// TextArea1 control.
+        /// tipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextArea1;
+        protected global::System.Web.UI.WebControls.TextBox tipo;
         
         /// <summary>
-        /// sendBTN control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sendBTN;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

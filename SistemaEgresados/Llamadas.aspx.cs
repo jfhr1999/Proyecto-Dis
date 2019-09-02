@@ -24,20 +24,62 @@ namespace SistemaEgresados
 
         public void saveCall(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("registrarLlamadasp", conn);                     //usa el sp
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = cedula.Text;
-            cmd.Parameters.Add("@motivo", SqlDbType.VarChar).Value = DropDownList1.SelectedValue;
-            cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Calendar1.SelectedDate ;
-            cmd.Parameters.Add("@comentario", SqlDbType.VarChar).Value = TextArea1.Text;
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal1();", true);
+            string motivo = DropDownList1.SelectedValue;
+            if (motivo.Equals("Ofrecer"))
+            {
+                SqlCommand cmd = new SqlCommand("agregarCursoOfertado", conn);                     //usa el sp
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = cedula.Text;
+                cmd.Parameters.Add("@codigoCurso", SqlDbType.VarChar).Value = curso.Text;
+                cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Calendar1.SelectedDate;
+                cmd.Parameters.Add("@comentarios", SqlDbType.VarChar).Value = TextArea1.Text;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                SqlCommand cmd2 = new SqlCommand("registrarLlamadasp", conn);                     //usa el sp
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.Add("@cedula", SqlDbType.Float).Value = cedula.Text;
+                cmd2.Parameters.Add("@motivo", SqlDbType.VarChar).Value = DropDownList1.SelectedValue;
+                cmd2.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Calendar1.SelectedDate;
+                cmd2.Parameters.Add("@comentario", SqlDbType.VarChar).Value = TextArea1.Text;
+                conn.Open();
+                cmd2.ExecuteNonQuery();
+                conn.Close();
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal1();", true);
+
+            }
+            else
+            {
+                SqlCommand cmd = new SqlCommand("registrarLlamadasp", conn);                     //usa el sp
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = cedula.Text;
+                cmd.Parameters.Add("@motivo", SqlDbType.VarChar).Value = DropDownList1.SelectedValue;
+                cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Calendar1.SelectedDate;
+                cmd.Parameters.Add("@comentario", SqlDbType.VarChar).Value = TextArea1.Text;
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal1();", true);
+            }
+            
 
 
 
         }
+
+        protected void DropDownList_Changed(object sender, EventArgs e)
+        {
+            if (DropDownList1.SelectedItem.Value == "Ofrecer cursos")
+            {
+                pnlTextBox.Visible = true;
+            }
+            else
+            {
+                pnlTextBox.Visible = false;
+            }
+        }
+
 
 
     }
