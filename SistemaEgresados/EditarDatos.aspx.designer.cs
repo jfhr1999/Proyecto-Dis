@@ -40,6 +40,24 @@ namespace SistemaEgresados {
         protected global::System.Web.UI.WebControls.TextBox TextBoxNombre;
         
         /// <summary>
+        /// LabelCedula control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelCedula;
+        
+        /// <summary>
+        /// LabelSetCedula control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSetCedula;
+        
+        /// <summary>
         /// LabelGenero control.
         /// </summary>
         /// <remarks>
@@ -58,42 +76,6 @@ namespace SistemaEgresados {
         protected global::System.Web.UI.WebControls.TextBox TextBoxGenero;
         
         /// <summary>
-        /// LabelCedula control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelCedula;
-        
-        /// <summary>
-        /// TextBoxCedula control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCedula;
-        
-        /// <summary>
-        /// LabelPasaporte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPasaporte;
-        
-        /// <summary>
-        /// TextBoxPasaporte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxPasaporte;
-        
-        /// <summary>
         /// LabelCarnet control.
         /// </summary>
         /// <remarks>
@@ -103,13 +85,13 @@ namespace SistemaEgresados {
         protected global::System.Web.UI.WebControls.Label LabelCarnet;
         
         /// <summary>
-        /// TextBoxCarnet control.
+        /// LabelSetCarnet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCarnet;
+        protected global::System.Web.UI.WebControls.Label LabelSetCarnet;
         
         /// <summary>
         /// Label2 control.

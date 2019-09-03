@@ -21,29 +21,23 @@
   <div class="row">
     <div class="col">
         <asp:Label id="LabelNombre" Text="Nombre:" runat="server" Width="100" Font-Size="Large"/>
-        <asp:TextBox ID="TextBoxNombre" Columns="2" MaxLength="50" Text="" runat="server" Width="250" Font-Size="Large"/>  
+        <asp:TextBox ID="TextBoxNombre" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
     </div>
     <div class="col">
-        <asp:Label id="LabelGenero" Text="Género:" runat="server" Width="100" Font-Size="Large"/>
-        <asp:TextBox ID="TextBoxGenero" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
+        <asp:Label id="LabelCedula" Text="Cédula:" runat="server" Width="100" Font-Size="Large"/>
+        <asp:Label id="LabelSetCedula" Text="" runat="server" Width="200" Font-Size="Large" ForeColor="GrayText"/>
     </div>
     <div class="w-100"></div>
       <br />
     <div class="col">
-        <asp:Label id="LabelCedula" Text="Cédula:" runat="server" Width="100" Font-Size="Large"/>
-        <asp:TextBox ID="TextBoxCedula" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
+        <asp:Label id="LabelGenero" Text="Genero:" runat="server" Width="100" Font-Size="Large"/>
+        <asp:TextBox ID="TextBoxGenero" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
     </div>
-    <div class="col">
-        <asp:Label id="LabelPasaporte" Text="Pasaporte:" runat="server" Width="100" Font-Size="Large"/>
-        <asp:TextBox ID="TextBoxPasaporte" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
-    </div>
-
-      <div class="w-100"></div>
-      <br />
     <div class="col">
         <asp:Label id="LabelCarnet" Text="Carné:" runat="server" Width="100" Font-Size="Large"/>
-        <asp:TextBox ID="TextBoxCarnet" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
+        <asp:Label id="LabelSetCarnet" Text="" runat="server" Width="200" Font-Size="Large" ForeColor="GrayText"/>
     </div>
+
   </div>
 </div>
 
@@ -63,11 +57,11 @@
         <div class="row">
             <div class="col">
                 <asp:Label id="LabelCorreo" Text="Correo:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxCorreo" Columns="2" MaxLength="50" Text="" runat="server" Width="250" Font-Size="Large"/>  
+                <asp:TextBox ID="TextBoxCorreo" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
             </div>
             <div class="col">
                 <asp:Label id="LabelTelefono" Text="Teléfono:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxTelefono" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
+                <asp:TextBox ID="TextBoxTelefono" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
         </div>
     </div>
@@ -88,21 +82,21 @@
         <div class="row">
             <div class="col">
                 <asp:Label id="LabelProvincia" Text="Provincia:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxProvincia" Columns="2" MaxLength="50" Text="" runat="server" Width="250" Font-Size="Large"/>  
+                <asp:TextBox ID="TextBoxProvincia" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
             </div>
             <div class="col">
                 <asp:Label id="LabelCanton" Text="Cantón:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxCanton" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
+                <asp:TextBox ID="TextBoxCanton" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
             <div class="w-100"></div>
               <br />
             <div class="col">
                 <asp:Label id="LabelDistrito" Text="Distrito:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxDistrito" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
+                <asp:TextBox ID="TextBoxDistrito" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
             <div class="col">
                 <asp:Label id="LabelPais" Text="País:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxPais" Columns="2" MaxLength="50" Text="" runat="server"  Width="250" Font-Size="Large"/> 
+                <asp:TextBox ID="TextBoxPais" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
         </div>
     </div>
@@ -118,6 +112,6 @@
     </div>
     <br />
 
-    <a href="#" class="btn btn-primary btn-lg float-right" role="button" aria-pressed="true">Guardar Datos</a>
+    <a href="#" class="btn btn-primary btn-lg float-right" role="button" aria-pressed="true" runat="server" onserverclick="editarDatos">Guardar Datos</a>
 
 </asp:Content>

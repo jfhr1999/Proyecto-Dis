@@ -49,7 +49,7 @@ namespace SistemaEgresados
             SqlCommand cmd = new SqlCommand("fuzzySearch", conn);                   
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);                            //ejecuta el sp con un adapter
+            SqlDataAdapter da = new SqlDataAdapter(cmd); //ejecuta el sp con un adapter
             conn.Open();
             da.Fill(dt);                                                            //llena la data table
             GridView1.DataSource = dt;
