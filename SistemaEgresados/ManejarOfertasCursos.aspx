@@ -136,12 +136,15 @@
 
     <br /><br />
 
+    <%--Botones de llamadas y enviar correo--%>
     <div class="row">
+        <%--Columna vacía--%>
         <div class="col-12 col-sm-2 col-md-4 col-lg-6 col-xl-8"></div>
-        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3 col-xl-2">
-            
+        <%--Columna boton llamadas--%>
+        <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3 col-xl-2">  
             <a href="#" class="btn btn-dark btn-block" role="button" aria-pressed="true" onclick="window.location.href='/Llamadas.aspx'">Registrar llamada</a>
         </div>
+        <%--Columna boton enviar correo--%>
         <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3 col-xl-2">
             <a href="#" class="btn btn-dark btn-block" role="button" aria-pressed="true" onclick="window.location.href='/EnvioCorreo.aspx'">Enviar correo</a>
         </div>

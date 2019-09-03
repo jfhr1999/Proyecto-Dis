@@ -14,6 +14,9 @@
             <asp:Label class="text-dark" id="LabelEnviarCorreo" Text="Enviar correo:" runat="server" Width="400" Font-Size="XX-Large"/>
         </div>
         <br /><br />
+
+
+
     </div>
 </asp:Content>
 
