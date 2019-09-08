@@ -5,6 +5,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
+
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
+
 <div class="container">
     <br /><br /><br /><br />
     
@@ -15,24 +19,30 @@
     <br /><br />
 
     <%--Seleccionar curso (select y boton)--%>
-    <form">
-        <div class="form-row align-items-center">
-            <div class="col-auto">
-                <label for="sel1">Seleccione un curso:</label>
-            </div>
-            <div class="col-auto">
-                <select class="form-control" id="sel1">
-                    <option>Project - Básico</option>
-                    <option>Project - Avanzado</option>
-                    <option>Bases de datos</option>
-                    <option>Python</option>
-                </select>
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-2">Buscar</button>
-            </div>
-        </div>
-
+    <form>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <label for="sel1">Seleccione un curso:</label>
+                    </div>
+                    <div class="col-auto">
+                        <asp:DropDownList CssClass="form-control" ID="dropDownCursos" runat="server" AppendDataBoundItems="true">
+                            <asp:ListItem Text="Por favor seleccione una opción" Value="0" />
+                        </asp:DropDownList>
+                    </div>
+                    <div class="col-auto">
+                        <asp:LinkButton runat="server" class="btn btn-primary mb-2" ID="btnSearch" OnClick="mostrarInfo">Buscar</asp:LinkButton>
+                    </div>
+                </div>
+            </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="dropDownCursos" 
+                EventName="SelectedIndexChanged" />
+                <%--<asp:AsyncPostBackTrigger ControlID="btnSearch"
+                EventName="mostrarInfo" />--%>
+            </Triggers>
+        </asp:UpdatePanel>
                 
     </form>
     
@@ -42,97 +52,98 @@
     <br /><br />
 
     <%--Cuadro con informacion del curso--%>
-    <div class="container bg-light">
-        <div class="row">
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+        <ContentTemplate>
+            <div class="container bg-light">
+                <div class="row">
             
-            <div class="col-sm-2">Curso:</div>
-            <div class="col-sm-4">Project - Básico</div>
+                    <%--Dos columnas con informacion del curso--%>
+                    <div class="col-sm-2">Código:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblCodigo" Text="" runat="server"></asp:Label></div>
 
-            <div class="col-sm-2">Precio:</div>
-            <div class="col-sm-4">$150</div>
+                    <div class="col-sm-2">Nombre:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblNombre" Text="" runat="server"></asp:Label></div>
 
+                    <%--Separador de filas--%>
+                    <div class="w-100"></div>
 
-            <div class="w-100"></div>
+                    <div class="col-sm-2">Precio:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblPrecio" Text="" runat="server"></asp:Label></div>
 
-            <div class="col-sm-2">Profesor:</div>
-            <div class="col-sm-4">GOMEZ SAENZ LUIS ADRIAN</div>
+                    <div class="col-sm-2">Descripción:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblDescripcion" Text="" runat="server"></asp:Label></div>
 
-            <div class="col-sm-2">Horario:</div>
-            <div class="col-sm-4">M-V 17:00-19:50</div>
+                    <div class="w-100"></div>
 
+                    <div class="col-sm-2">Periodo:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblPeriodo" Text="" runat="server"></asp:Label></div>
+
+                    <div class="col-sm-2">Profesor:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblProfesor" Text="" runat="server"></asp:Label></div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-sm-2">Horario:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblHorario" Text="" runat="server"></asp:Label></div>
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4"></div>
           
-        </div>
+                </div>
         
-    </div>
+            </div>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnSearch" EventName="Click" />
+        </Triggers>
+    </asp:UpdatePanel>
 
     <hr/>
     <br /><br />
 
-    <asp:Label class="text-dark" id="LabelHistorialOfertas" Text="Historial de ofertas del curso:" runat="server" Width="250" Font-Size="Large"/><span class="badge badge-dark">3</span>
-    <br /><br />
+    <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+        <ContentTemplate>
+            <asp:Label class="text-dark" id="LabelHistorialOfertas" Text="Historial de ofertas del curso:" runat="server" Width="250" Font-Size="Large"/><span class="badge badge-dark"><asp:Label ID="textoBadge" Text="0" runat="server"></asp:Label></span>
+            <br /><br />
     
-    <%--Tabla de historial de ofertas--%>
-    <table class="table table-responsive-sm table-hover table-bordered">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Tipo de oferta</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">Identificación</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Llamada</td>
-                <td>02/05/2019</td>
-                <td>101230456</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Llamada</td>
-              <td>15/06/2019</td>
-              <td>109870654</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Correo</td>
-              <td>16/06/2019</td>
-              <td>Masivo</td>
-            </tr>
-        </tbody>
-    </table>
-
+            <%--Tabla de historial de ofertas--%>
+            <asp:GridView ID="GridView1" runat="server" ShowHeaderWhenEmpty="True" EmptyDataText="No se encontraron resultados." AllowPaging="True" CssClass="table table-responsive-sm table-hover table-bordered" HeaderStyle-CssClass="thead-dark" AutoGenerateColumns="false" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="10">     
+                 <Columns>
+                     <asp:BoundField HeaderText="Cédula" ItemStyle-CssClass="thead-dark" DataField="Cédula" />
+                     <asp:BoundField HeaderText="Fecha" ItemStyle-CssClass="thead-dark" DataField="Fecha" />
+                     <asp:BoundField HeaderText="Comentarios" ItemStyle-CssClass="thead-dark" DataField="Comentarios" />
+                     <asp:BoundField HeaderText="Medio" ItemStyle-CssClass="thead-dark" DataField="Medio" />
+                </Columns>
+                <PagerStyle CssClass="GridPager" HorizontalAlign="Right" />
+            </asp:GridView>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnSearch" EventName="Click" />
+        </Triggers>
+    </asp:UpdatePanel>
     <br /><br />
 
     <asp:Label class="text-dark" id="LabelInteresados" Text="Interesados en el curso:" runat="server" Width="250" Font-Size="Large"/>
     <br /><br />
 
     <%--Tabla de interesados--%>
-    <table class="table table-striped table-responsive-sm table-hover table-bordered">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Identificación</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Correo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>DURAN CESPEDES REBECA</td>
-                <td>101230456</td>
-                <td>87654321</td>
-                <td>rdurances@correo.com</td>
-            </tr>
-            <tr>
-                <td>VILLALOBOS ARIAS NADIA</td>
-                <td>908760543</td>
-                <td>81234567</td>
-                <td>nadia_va_09@gmail.com</td>
-            </tr>
-      </tbody>
-    </table>
+    <asp:UpdatePanel ID="UpdatePanel4" runat="server">
+        <ContentTemplate>
+            <asp:GridView ID="GridView2" runat="server" ShowHeaderWhenEmpty="True" EmptyDataText="No se encontraron resultados." AllowPaging="True" CssClass="table table-responsive-sm table-hover table-bordered" HeaderStyle-CssClass="thead-dark" AutoGenerateColumns="false" OnPageIndexChanging="GridView2_PageIndexChanging" PageSize="10">     
+                 <Columns>
+                     <asp:BoundField HeaderText="Cédula" ItemStyle-CssClass="thead-dark" DataField="Cedula" />
+                     <asp:BoundField HeaderText="Nombre" ItemStyle-CssClass="thead-dark" DataField="Nombre" />
+                     <asp:BoundField HeaderText="Correo" ItemStyle-CssClass="thead-dark" DataField="Correo" />
+                     <asp:BoundField HeaderText="Teléfono casa" ItemStyle-CssClass="thead-dark" DataField="TelCasa" />
+                     <asp:BoundField HeaderText="Celular" ItemStyle-CssClass="thead-dark" DataField="Celular" />
+                </Columns>
+                <PagerStyle CssClass="GridPager" HorizontalAlign="Right" />
+            </asp:GridView>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnSearch" EventName="Click" />
+        </Triggers>
+    </asp:UpdatePanel>
 
     <br /><br />
 
