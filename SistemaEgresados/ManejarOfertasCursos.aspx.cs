@@ -55,6 +55,8 @@ namespace SistemaEgresados
         {
             string msg = dropDownCursos.SelectedItem.Text;
             ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
+
+            Session["IdCurso"] = dropDownCursos.SelectedValue;
         }
 
         protected void mostrarInfo(object sender, EventArgs e)
@@ -165,6 +167,8 @@ namespace SistemaEgresados
             GridView2.HeaderRow.TableSection = TableRowSection.TableHeader;
 
             conn.Close();
+
+            textoBadge2.Text = GridView2.Rows.Count.ToString();
         }
 
     }

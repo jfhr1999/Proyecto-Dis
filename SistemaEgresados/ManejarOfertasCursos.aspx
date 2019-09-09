@@ -14,7 +14,7 @@
     
     <%--Label del titulo--%>
     <div class="text-center ">
-        <asp:Label class="text-dark" id="LabelManejarOfertasCursos" Text="Manejar ofertas de cursos:" runat="server" Width="400" Font-Size="XX-Large"/>
+        <asp:Label class="text-dark" id="LabelManejarOfertasCursos" Text="Manejar ofertas de cursos" runat="server" Width="400" Font-Size="XX-Large"/>
     </div>
     <br /><br />
 
@@ -27,9 +27,18 @@
                         <label for="sel1">Seleccione un curso:</label>
                     </div>
                     <div class="col-auto">
-                        <asp:DropDownList CssClass="form-control" ID="dropDownCursos" runat="server" AppendDataBoundItems="true">
+                        <asp:DropDownList CssClass="form-control" ID="dropDownCursos" runat="server" AppendDataBoundItems="true" OnSelectedIndexChanged="dropDownCursos_SelectedIndexChanged">
                             <asp:ListItem Text="Por favor seleccione una opción" Value="0" />
                         </asp:DropDownList>
+                        <script runat="server">
+                            protected void dropDownCursos_SelectedIndexChanged(object sender, EventArgs e)
+                            {
+                                string msg = dropDownCursos.SelectedItem.Text;
+                                ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
+
+                                Session["IdCurso"] = dropDownCursos.SelectedValue;
+                            }
+                        </script>
                     </div>
                     <div class="col-auto">
                         <asp:LinkButton runat="server" class="btn btn-primary mb-2" ID="btnSearch" OnClick="mostrarInfo">Buscar</asp:LinkButton>
@@ -123,19 +132,19 @@
     </asp:UpdatePanel>
     <br /><br />
 
-    <asp:Label class="text-dark" id="LabelInteresados" Text="Interesados en el curso:" runat="server" Width="250" Font-Size="Large"/>
-    <br /><br />
-
-    <%--Tabla de interesados--%>
     <asp:UpdatePanel ID="UpdatePanel4" runat="server">
         <ContentTemplate>
+            <asp:Label class="text-dark" id="LabelInteresados" Text="Interesados en el curso:" runat="server" Width="250" Font-Size="Large"/><span class="badge badge-dark"><asp:Label ID="textoBadge2" Text="0" runat="server"></asp:Label></span>
+            <br /><br />
+
+            <%--Tabla de interesados--%>
             <asp:GridView ID="GridView2" runat="server" ShowHeaderWhenEmpty="True" EmptyDataText="No se encontraron resultados." AllowPaging="True" CssClass="table table-responsive-sm table-hover table-bordered" HeaderStyle-CssClass="thead-dark" AutoGenerateColumns="false" OnPageIndexChanging="GridView2_PageIndexChanging" PageSize="10">     
-                 <Columns>
-                     <asp:BoundField HeaderText="Cédula" ItemStyle-CssClass="thead-dark" DataField="Cedula" />
-                     <asp:BoundField HeaderText="Nombre" ItemStyle-CssClass="thead-dark" DataField="Nombre" />
-                     <asp:BoundField HeaderText="Correo" ItemStyle-CssClass="thead-dark" DataField="Correo" />
-                     <asp:BoundField HeaderText="Teléfono casa" ItemStyle-CssClass="thead-dark" DataField="TelCasa" />
-                     <asp:BoundField HeaderText="Celular" ItemStyle-CssClass="thead-dark" DataField="Celular" />
+                    <Columns>
+                        <asp:BoundField HeaderText="Cédula" ItemStyle-CssClass="thead-dark" DataField="Cedula" />
+                        <asp:BoundField HeaderText="Nombre" ItemStyle-CssClass="thead-dark" DataField="Nombre" />
+                        <asp:BoundField HeaderText="Correo" ItemStyle-CssClass="thead-dark" DataField="Correo" />
+                        <asp:BoundField HeaderText="Teléfono casa" ItemStyle-CssClass="thead-dark" DataField="TelCasa" />
+                        <asp:BoundField HeaderText="Celular" ItemStyle-CssClass="thead-dark" DataField="Celular" />
                 </Columns>
                 <PagerStyle CssClass="GridPager" HorizontalAlign="Right" />
             </asp:GridView>
