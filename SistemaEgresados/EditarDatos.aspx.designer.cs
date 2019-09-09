@@ -67,13 +67,13 @@ namespace SistemaEgresados {
         protected global::System.Web.UI.WebControls.Label LabelGenero;
         
         /// <summary>
-        /// TextBoxGenero control.
+        /// genero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxGenero;
+        protected global::System.Web.UI.WebControls.TextBox genero;
         
         /// <summary>
         /// LabelCarnet control.
@@ -227,5 +227,14 @@ namespace SistemaEgresados {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
+        
+        /// <summary>
+        /// btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn;
     }
 }

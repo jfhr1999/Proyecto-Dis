@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col">
         <asp:Label id="LabelNombre" Text="Nombre:" runat="server" Width="100" Font-Size="Large"/>
-        <asp:TextBox ID="TextBoxNombre" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
+        <asp:TextBox id="TextBoxNombre" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
     </div>
     <div class="col">
         <asp:Label id="LabelCedula" Text="Cédula:" runat="server" Width="100" Font-Size="Large"/>
@@ -31,7 +31,7 @@
       <br />
     <div class="col">
         <asp:Label id="LabelGenero" Text="Genero:" runat="server" Width="100" Font-Size="Large"/>
-        <asp:TextBox ID="TextBoxGenero" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
+        <asp:TextBox id="genero" Columns="2" MaxLength="50" runat="server"  Width="320" Font-Size="Large"/> 
     </div>
     <div class="col">
         <asp:Label id="LabelCarnet" Text="Carné:" runat="server" Width="100" Font-Size="Large"/>
@@ -57,11 +57,11 @@
         <div class="row">
             <div class="col">
                 <asp:Label id="LabelCorreo" Text="Correo:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxCorreo" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
+                <asp:TextBox id="TextBoxCorreo" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
             </div>
             <div class="col">
                 <asp:Label id="LabelTelefono" Text="Teléfono:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxTelefono" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
+                <asp:TextBox id="TextBoxTelefono" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
         </div>
     </div>
@@ -82,21 +82,21 @@
         <div class="row">
             <div class="col">
                 <asp:Label id="LabelProvincia" Text="Provincia:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxProvincia" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
+                <asp:TextBox id="TextBoxProvincia" Columns="2" MaxLength="50" Text="" runat="server" Width="320" Font-Size="Large"/>  
             </div>
             <div class="col">
                 <asp:Label id="LabelCanton" Text="Cantón:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxCanton" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
+                <asp:TextBox id="TextBoxCanton" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
             <div class="w-100"></div>
               <br />
             <div class="col">
                 <asp:Label id="LabelDistrito" Text="Distrito:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxDistrito" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
+                <asp:TextBox id="TextBoxDistrito" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
             <div class="col">
                 <asp:Label id="LabelPais" Text="País:" runat="server" Width="100" Font-Size="Large"/>
-                <asp:TextBox ID="TextBoxPais" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
+                <asp:TextBox id="TextBoxPais" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
         </div>
     </div>
@@ -112,6 +112,6 @@
     </div>
     <br />
 
-    <a href="#" class="btn btn-primary btn-lg float-right" role="button" aria-pressed="true" runat="server" onserverclick="editarDatos">Guardar Datos</a>
+    <asp:Button id="btn" class="btn btn-primary btn-lg float-right" Text="Guardar Datos" CausesValidation="False" runat="server" onClick="editarDatos"></asp:Button>
 
 </asp:Content>

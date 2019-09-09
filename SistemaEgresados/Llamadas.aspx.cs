@@ -25,14 +25,16 @@ namespace SistemaEgresados
         public void saveCall(object sender, EventArgs e)
         {
             string motivo = DropDownList1.SelectedValue;
+            string interes = radioInteres.SelectedValue;
             if (motivo.Equals("Ofrecer"))
             {
-                SqlCommand cmd = new SqlCommand("agregarCursoOfertado", conn);                     //usa el sp
+                SqlCommand cmd = new SqlCommand("agregarCursoOfertadoDeLlamada", conn);                     //usa el sp
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = cedula.Text;
                 cmd.Parameters.Add("@codigoCurso", SqlDbType.VarChar).Value = curso.Text;
                 cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Calendar1.SelectedDate;
                 cmd.Parameters.Add("@comentarios", SqlDbType.VarChar).Value = TextArea1.Text;
+                cmd.Parameters.Add("@medio", SqlDbType.VarChar).Value = "LLAMADA";
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -46,6 +48,18 @@ namespace SistemaEgresados
                 conn.Open();
                 cmd2.ExecuteNonQuery();
                 conn.Close();
+
+                if (interes.Equals("si"))
+                {
+                    SqlCommand cmd3 = new SqlCommand("agregarCursoInteresDeLlamada", conn);                     //usa el sp
+                    cmd3.CommandType = CommandType.StoredProcedure;
+                    cmd3.Parameters.Add("@cedula", SqlDbType.Float).Value = cedula.Text;
+                    cmd3.Parameters.Add("@codigoCurso", SqlDbType.VarChar).Value = curso.Text;
+
+                    conn.Open();
+                    cmd3.ExecuteNonQuery();
+                    conn.Close();
+                }
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "openModal1();", true);
 
             }
@@ -70,9 +84,10 @@ namespace SistemaEgresados
 
         protected void DropDownList_Changed(object sender, EventArgs e)
         {
-            if (DropDownList1.SelectedItem.Value == "Ofrecer cursos")
+            if (DropDownList1.SelectedItem.Value == "Ofrecer")
             {
                 pnlTextBox.Visible = true;
+                radioInteres.Visible = true;
             }
             else
             {

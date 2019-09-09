@@ -49,10 +49,14 @@
                     </asp:DropDownList>
                 </div> 
                 <br />
-                 <asp:Panel ID="pnlTextBox" runat="server" Visible="false">
+                <asp:Panel ID="pnlTextBox" runat="server" Visible="false">
                     Codigo de curso:
                     <asp:TextBox ID="curso" runat="server" />
                 </asp:Panel>
+                <asp:RadioButtonList ID="radioInteres" runat="server" Visible ="false">
+                    <asp:ListItem Text="Interesado" Value="si" />
+                    <asp:ListItem Text="No esta interesado" Value="no" />
+                </asp:RadioButtonList>
                 
                 <div class="input-group">
                     <br />

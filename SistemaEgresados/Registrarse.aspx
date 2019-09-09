@@ -32,7 +32,7 @@
                         <asp:TextBox ID="password" type="password" autocomplete="off" placeholder="Contraseña" runat="server" ></asp:TextBox>
                         <asp:Button ID="send" type="submit"  OnClick="Register_click" runat="server" CausesValidation="False" Text="Registrar" style="background-color: #150E38; color: #FFFFFF;" />
                     </form>
-                    
+                    <h1></h1>
                     
       
 

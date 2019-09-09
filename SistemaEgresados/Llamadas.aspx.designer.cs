@@ -58,6 +58,15 @@ namespace SistemaEgresados {
         protected global::System.Web.UI.WebControls.TextBox curso;
         
         /// <summary>
+        /// radioInteres control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList radioInteres;
+        
+        /// <summary>
         /// TextArea1 control.
         /// </summary>
         /// <remarks>
