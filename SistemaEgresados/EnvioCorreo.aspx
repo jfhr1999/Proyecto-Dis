@@ -47,7 +47,18 @@
 
         <hr/>
 
+        <br /><br />
+
         <form>
+            
+            <div class="form-group">
+                <label for="TextBoxAsuntoCorreo">Indique el asunto del correo (favor no utilizar asteriscos):</label>
+                <asp:TextBox ID="TextBoxAsuntoCorreo" runat="server" TextMode="MultiLine" CssClass="form-control col-12" Text="" Rows="1">
+                </asp:TextBox>
+            </div>
+
+            <%--<hr />--%>
+
             <div class="form-group">
                 <label for="TextBoxCuerpoCorreo">Indique el cuerpo del correo (favor no utilizar asteriscos y no modificar el campo **NOMBRE**):</label>
                 <asp:TextBox ID="TextBoxCuerpoCorreo" runat="server" TextMode="MultiLine" CssClass="form-control col-12" Text="" Rows="15">

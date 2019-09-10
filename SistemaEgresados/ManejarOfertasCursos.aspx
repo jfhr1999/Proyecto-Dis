@@ -33,8 +33,8 @@
                         <script runat="server">
                             protected void dropDownCursos_SelectedIndexChanged(object sender, EventArgs e)
                             {
-                                string msg = dropDownCursos.SelectedItem.Text;
-                                ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
+                                //string msg = dropDownCursos.SelectedItem.Text;
+                                //ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
 
                                 Session["IdCurso"] = dropDownCursos.SelectedValue;
                             }
