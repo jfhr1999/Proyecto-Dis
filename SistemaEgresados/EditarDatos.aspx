@@ -63,6 +63,12 @@
                 <asp:Label id="LabelTelefono" Text="Teléfono:" runat="server" Width="100" Font-Size="Large"/>
                 <asp:TextBox id="TextBoxTelefono" Columns="2" MaxLength="50" Text="" runat="server"  Width="320" Font-Size="Large"/> 
             </div>
+            <div class="w-100"></div>
+                <br />
+            <div class="col">
+                <asp:Label id="LabelCelular" Text="Celular:" runat="server" Width="100" Font-Size="Large"/>
+                <asp:TextBox id="TextBoxCelular" Columns="2" MaxLength="50" runat="server"  Width="320" Font-Size="Large"/> 
+            </div>
         </div>
     </div>
 
@@ -202,6 +208,6 @@
         </Triggers>
     </asp:UpdatePanel>
 
-        <asp:Button id="Button1" class="btn btn-primary btn-lg float-right" Text="Seleccionar Curso" CausesValidation="False" runat="server" ></asp:Button>
+        <asp:Button id="Button1" class="btn btn-primary btn-lg float-right" Text="Seleccionar Curso" CausesValidation="False" runat="server" onclick="btnSeleccionarCurso"></asp:Button>
 
 </asp:Content>

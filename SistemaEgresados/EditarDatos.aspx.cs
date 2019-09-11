@@ -40,10 +40,11 @@ namespace SistemaEgresados
                 genero.Text = dr.GetValue(3).ToString();
                 TextBoxCorreo.Text = dr.GetValue(4).ToString();
                 TextBoxTelefono.Text = dr.GetValue(5).ToString();
-                TextBoxProvincia.Text = dr.GetValue(6).ToString();
-                TextBoxDistrito.Text = dr.GetValue(7).ToString();
-                TextBoxCanton.Text = dr.GetValue(8).ToString();
-                TextBoxPais.Text = dr.GetValue(9).ToString();
+                TextBoxCelular.Text = dr.GetValue(6).ToString();
+                TextBoxProvincia.Text = dr.GetValue(7).ToString();
+                TextBoxDistrito.Text = dr.GetValue(8).ToString();
+                TextBoxCanton.Text = dr.GetValue(9).ToString();
+                TextBoxPais.Text = dr.GetValue(10).ToString();
             }
 
             dr.Close();
@@ -52,8 +53,6 @@ namespace SistemaEgresados
 
         public void editarDatos(object sender, EventArgs e)
         {
-            
-
             SqlCommand cmd = new SqlCommand("editarDatos", conn);                     //usa el sp
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = Convert.ToDecimal(Session["UserActual"]);
@@ -61,7 +60,8 @@ namespace SistemaEgresados
             cmd.Parameters.Add("@genero", SqlDbType.VarChar).Value = genero.Text;
             System.Diagnostics.Debug.WriteLine(genero.Text);
             cmd.Parameters.Add("@correo", SqlDbType.VarChar).Value = TextBoxCorreo.Text;
-            cmd.Parameters.Add("@telCasa", SqlDbType.Float).Value = Convert.ToDecimal(TextBoxTelefono);           //He intentado de todo
+            cmd.Parameters.Add("@telCasa", SqlDbType.Float).Value = Convert.ToDecimal(TextBoxTelefono.Text);           //He intentado de todo
+            cmd.Parameters.Add("@celular", SqlDbType.Float).Value = Convert.ToDecimal(TextBoxCelular.Text);
             cmd.Parameters.Add("@provincia", SqlDbType.VarChar).Value = TextBoxProvincia.Text;                      //El problema es que no agarra lo que el user pone en el text box, sino lo que ser carga en el OnLoad
             cmd.Parameters.Add("@distrito", SqlDbType.VarChar).Value = TextBoxDistrito.Text;
             cmd.Parameters.Add("@canton", SqlDbType.VarChar).Value = TextBoxCanton.Text;
@@ -149,7 +149,26 @@ namespace SistemaEgresados
             lblHorario.Text = dt.Rows[0]["horario"].ToString();
 
             conn.Close();
+        }
 
+        public void btnSeleccionarCurso(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("agregarCursoInteres", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = Convert.ToDecimal(Session["UserActual"]);
+            cmd.Parameters.Add("@codigoCurso", SqlDbType.VarChar).Value = lblCodigo.Text.ToString();
+            try
+            {
+                conn.Open();
+                Int32 rowsAffected = cmd.ExecuteNonQuery();
+                System.Diagnostics.Debug.WriteLine("RowsAffected: {0}", rowsAffected);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("NOOO SE PUDOOO");
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            conn.Close();
         }
     }
 }
