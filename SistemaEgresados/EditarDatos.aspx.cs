@@ -20,6 +20,7 @@ namespace SistemaEgresados
                 cargarDatos();
                 mostrarCursos(sender, e);
             }
+            
         }
 
         SqlConnection conn = new SqlConnection("Data Source=SQL5045.site4now.net;Initial Catalog=DB_A4CEA1_graduadosmgp;User Id=DB_A4CEA1_graduadosmgp_admin;Password=graduados19;");
@@ -60,7 +61,7 @@ namespace SistemaEgresados
             cmd.Parameters.Add("@genero", SqlDbType.VarChar).Value = genero.Text;
             System.Diagnostics.Debug.WriteLine(genero.Text);
             cmd.Parameters.Add("@correo", SqlDbType.VarChar).Value = TextBoxCorreo.Text;
-            cmd.Parameters.Add("@telCasa", SqlDbType.VarChar).Value = Convert.ToDecimal(TextBoxTelefono);           //He intentado de todo
+            cmd.Parameters.Add("@telCasa", SqlDbType.Float).Value = Convert.ToDecimal(TextBoxTelefono);           //He intentado de todo
             cmd.Parameters.Add("@provincia", SqlDbType.VarChar).Value = TextBoxProvincia.Text;                      //El problema es que no agarra lo que el user pone en el text box, sino lo que ser carga en el OnLoad
             cmd.Parameters.Add("@distrito", SqlDbType.VarChar).Value = TextBoxDistrito.Text;
             cmd.Parameters.Add("@canton", SqlDbType.VarChar).Value = TextBoxCanton.Text;
