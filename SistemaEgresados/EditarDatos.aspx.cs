@@ -15,9 +15,9 @@ namespace SistemaEgresados
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarDatos();
             if (!Page.IsPostBack)
             {
+                cargarDatos();
                 mostrarCursos(sender, e);
             }
         }
