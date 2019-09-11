@@ -100,7 +100,9 @@
             </div>
         </div>
     </div>
-
+    <br />
+     <asp:Button id="btn" class="btn btn-primary btn-lg float-right" Text="Guardar Datos Editados" CausesValidation="False" runat="server" onClick="editarDatos"></asp:Button>
+    <br /> <br />
     <hr/>
 
     <div class="container"> 
@@ -112,6 +114,94 @@
     </div>
     <br />
 
-    <asp:Button id="btn" class="btn btn-primary btn-lg float-right" Text="Guardar Datos" CausesValidation="False" runat="server" onClick="editarDatos"></asp:Button>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+
+     <%--Seleccionar curso (select y boton)--%>
+    <form>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <label for="sel1">Seleccione un curso:</label>
+                    </div>
+                    <div class="col-auto">
+                        <asp:DropDownList CssClass="form-control" ID="dropDownCursos" runat="server" AppendDataBoundItems="true" OnSelectedIndexChanged="dropDownCursos_SelectedIndexChanged">
+                            <asp:ListItem Text="Por favor seleccione una opción" Value="0" />
+                        </asp:DropDownList>
+                        <script runat="server">
+                            protected void dropDownCursos_SelectedIndexChanged(object sender, EventArgs e)
+                            {
+                                string msg = dropDownCursos.SelectedItem.Text;
+                                ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
+
+                                Session["IdCurso"] = dropDownCursos.SelectedValue;
+                            }
+                        </script>
+                    </div>
+                    <div class="col-auto">
+                        <asp:LinkButton runat="server" class="btn btn-primary mb-2" ID="btnSearch" OnClick="mostrarInfo">Buscar</asp:LinkButton>
+                    </div>
+                </div>
+            </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="dropDownCursos" 
+                EventName="SelectedIndexChanged" />
+                <%--<asp:AsyncPostBackTrigger ControlID="btnSearch"
+                EventName="mostrarInfo" />--%>
+            </Triggers>
+        </asp:UpdatePanel>
+                
+    </form>
+    
+
+    <%--Cuadro con informacion del curso--%>
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+        <ContentTemplate>
+            <div class="container bg-light">
+                <div class="row">
+            
+                    <%--Dos columnas con informacion del curso--%>
+                    <div class="col-sm-2">Código:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblCodigo" Text="" runat="server"></asp:Label></div>
+
+                    <div class="col-sm-2">Nombre:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblNombre" Text="" runat="server"></asp:Label></div>
+
+                    <%--Separador de filas--%>
+                    <div class="w-100"></div>
+
+                    <div class="col-sm-2">Precio:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblPrecio" Text="" runat="server"></asp:Label></div>
+
+                    <div class="col-sm-2">Descripción:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblDescripcion" Text="" runat="server"></asp:Label></div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-sm-2">Periodo:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblPeriodo" Text="" runat="server"></asp:Label></div>
+
+                    <div class="col-sm-2">Profesor:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblProfesor" Text="" runat="server"></asp:Label></div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-sm-2">Horario:</div>
+                    <div class="col-sm-4"><asp:Label ID="lblHorario" Text="" runat="server"></asp:Label></div>
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4"></div>
+          
+                </div>
+        
+            </div>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="btnSearch" EventName="Click" />
+        </Triggers>
+    </asp:UpdatePanel>
+
+        <asp:Button id="Button1" class="btn btn-primary btn-lg float-right" Text="Seleccionar Curso" CausesValidation="False" runat="server" ></asp:Button>
 
 </asp:Content>
