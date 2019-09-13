@@ -13,7 +13,7 @@
     <br /><br />
     <div class="text-center">
         <img src="Images/edit.png" height="18" width="45"/>
-        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/ActualizarTablas.aspx'">Actualizar tablas de graduados</a>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/ActualizarTablas.aspx'">Actualizar datos de graduados</a>
     </div>
     <br />
     <div class="text-center">
@@ -29,6 +29,21 @@
     <div class="text-center">
         <img src="Images/envelope-closed-8x.png" height="18" width="30"/>
         <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/ManejarOfertasCursos.aspx'">Manejar ofertas de cursos</a>
+    </div>
+    <br />
+    <div class="text-center">
+        <span class="glyphicon glyphicon-plus-sign" ></span>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/AgregarEstudiante.aspx'">Agregar graduado</a>
+    </div>
+    <br />
+    <div class="text-center">
+        <span class="glyphicon glyphicon-phone" ></span>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/Llamadas.aspx'">Registrar llamada</a>
+    </div>
+    <br />
+    <div class="text-center">
+        <span class="glyphicon glyphicon-eye-open" ></span>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/VerLlamadas.aspx'">Ver llamadas</a>
     </div>
 </div>
 </asp:Content>

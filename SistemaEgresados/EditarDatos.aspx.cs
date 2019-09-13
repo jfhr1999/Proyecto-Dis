@@ -60,9 +60,9 @@ namespace SistemaEgresados
             cmd.Parameters.Add("@genero", SqlDbType.VarChar).Value = genero.Text;
             System.Diagnostics.Debug.WriteLine(genero.Text);
             cmd.Parameters.Add("@correo", SqlDbType.VarChar).Value = TextBoxCorreo.Text;
-            cmd.Parameters.Add("@telCasa", SqlDbType.Float).Value = Convert.ToDecimal(TextBoxTelefono.Text);           //He intentado de todo
+            cmd.Parameters.Add("@telCasa", SqlDbType.Float).Value = Convert.ToDecimal(TextBoxTelefono.Text);          
             cmd.Parameters.Add("@celular", SqlDbType.Float).Value = Convert.ToDecimal(TextBoxCelular.Text);
-            cmd.Parameters.Add("@provincia", SqlDbType.VarChar).Value = TextBoxProvincia.Text;                      //El problema es que no agarra lo que el user pone en el text box, sino lo que ser carga en el OnLoad
+            cmd.Parameters.Add("@provincia", SqlDbType.VarChar).Value = TextBoxProvincia.Text;                     
             cmd.Parameters.Add("@distrito", SqlDbType.VarChar).Value = TextBoxDistrito.Text;
             cmd.Parameters.Add("@canton", SqlDbType.VarChar).Value = TextBoxCanton.Text;
             cmd.Parameters.Add("@pais", SqlDbType.VarChar).Value = TextBoxPais.Text;

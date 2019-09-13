@@ -10,411 +10,402 @@
 namespace SistemaEgresados {
     
     
-    public partial class ActualizarTablas {
+    public partial class AgregarEstudiante {
         
         /// <summary>
-        /// cedula control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cedula;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// search control.
+        /// LabelNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton search;
+        protected global::System.Web.UI.WebControls.Label LabelNombre;
         
         /// <summary>
-        /// Label5 control.
+        /// TextBoxNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxNombre;
         
         /// <summary>
-        /// EditNombre control.
+        /// LabelCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditNombre;
+        protected global::System.Web.UI.WebControls.Label LabelCedula;
         
         /// <summary>
-        /// TextEditNombre control.
+        /// TextBoxCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditNombre;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCedula;
         
         /// <summary>
-        /// EditCedula control.
+        /// LabelGenero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditCedula;
+        protected global::System.Web.UI.WebControls.Label LabelGenero;
         
         /// <summary>
-        /// TextEditCedula control.
+        /// TextBoxGenero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditCedula;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxGenero;
         
         /// <summary>
-        /// EditGenero control.
+        /// LabelCarnet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditGenero;
+        protected global::System.Web.UI.WebControls.Label LabelCarnet;
         
         /// <summary>
-        /// TextEditGenero control.
+        /// TextBoxCarnet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditGenero;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCarnet;
         
         /// <summary>
-        /// EditCarnet control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditCarnet;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// TextEditCarnet control.
+        /// LabelCorreo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditCarnet;
+        protected global::System.Web.UI.WebControls.Label LabelCorreo;
         
         /// <summary>
-        /// Label10 control.
+        /// TextBoxCorreo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCorreo;
         
         /// <summary>
-        /// EditCorreo control.
+        /// LabelTelefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditCorreo;
+        protected global::System.Web.UI.WebControls.Label LabelTelefono;
         
         /// <summary>
-        /// TextEditCorreo control.
+        /// TextBoxTelefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditCorreo;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTelefono;
         
         /// <summary>
-        /// EditTelefono control.
+        /// LabelCelular control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditTelefono;
+        protected global::System.Web.UI.WebControls.Label LabelCelular;
         
         /// <summary>
-        /// TextEditTelefono control.
+        /// TextBoxCel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditTelefono;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCel;
         
         /// <summary>
-        /// EditCel control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditCel;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextEditCel control.
+        /// LabelProvincia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditCel;
+        protected global::System.Web.UI.WebControls.Label LabelProvincia;
         
         /// <summary>
-        /// Label14 control.
+        /// TextBoxProvincia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxProvincia;
         
         /// <summary>
-        /// EditProvincia control.
+        /// LabelCanton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditProvincia;
+        protected global::System.Web.UI.WebControls.Label LabelCanton;
         
         /// <summary>
-        /// TextEditProvincia control.
+        /// TextBoxCanton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditProvincia;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCanton;
         
         /// <summary>
-        /// EditCanton control.
+        /// LabelDistrito control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditCanton;
+        protected global::System.Web.UI.WebControls.Label LabelDistrito;
         
         /// <summary>
-        /// TextEditCanton control.
+        /// TextBoxDistrito control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditCanton;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDistrito;
         
         /// <summary>
-        /// EditDistrito control.
+        /// LabelPais control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditDistrito;
+        protected global::System.Web.UI.WebControls.Label LabelPais;
         
         /// <summary>
-        /// TextEditDistrito control.
+        /// TextBoxPais control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditDistrito;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPais;
         
         /// <summary>
-        /// EditPais control.
+        /// LabelDireccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditPais;
+        protected global::System.Web.UI.WebControls.Label LabelDireccion;
         
         /// <summary>
-        /// TextEditPais control.
+        /// TextBoxDireccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditPais;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDireccion;
         
         /// <summary>
-        /// EditDireccion control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditDireccion;
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// TextEditDireccion control.
+        /// Acta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditDireccion;
+        protected global::System.Web.UI.WebControls.Label Acta;
         
         /// <summary>
-        /// Label19 control.
+        /// TextBoxActa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxActa;
         
         /// <summary>
-        /// EditActa control.
+        /// Plan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditActa;
+        protected global::System.Web.UI.WebControls.Label Plan;
         
         /// <summary>
-        /// TextEditActa control.
+        /// TextBoxPlan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditActa;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPlan;
         
         /// <summary>
-        /// EditPlan control.
+        /// Carrera control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditPlan;
+        protected global::System.Web.UI.WebControls.Label Carrera;
         
         /// <summary>
-        /// TextEditPlan control.
+        /// TextBoxCarrera control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditPlan;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCarrera;
         
         /// <summary>
-        /// EditCarrera control.
+        /// Sede control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditCarrera;
+        protected global::System.Web.UI.WebControls.Label Sede;
         
         /// <summary>
-        /// TextEditCarrera control.
+        /// TextBoxSede control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditCarrera;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSede;
         
         /// <summary>
-        /// EditSede control.
+        /// Grado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditSede;
+        protected global::System.Web.UI.WebControls.Label Grado;
         
         /// <summary>
-        /// TextEditSede control.
+        /// TextBoxGrado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditSede;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxGrado;
         
         /// <summary>
-        /// EditGrado control.
+        /// Titulo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditGrado;
+        protected global::System.Web.UI.WebControls.Label Titulo;
         
         /// <summary>
-        /// TextEditGrado control.
+        /// TextBoxTitulo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditGrado;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTitulo;
         
         /// <summary>
-        /// EditTitulo control.
+        /// Enfasis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditTitulo;
+        protected global::System.Web.UI.WebControls.Label Enfasis;
         
         /// <summary>
-        /// TextEditTitulo control.
+        /// TextBoxEnfasis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditTitulo;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEnfasis;
         
         /// <summary>
-        /// EditEnfasis control.
+        /// btnSend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditEnfasis;
+        protected global::System.Web.UI.WebControls.Button btnSend;
         
         /// <summary>
-        /// TextEditEnfasis control.
+        /// graduacion1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEditEnfasis;
-        
-        /// <summary>
-        /// btnSend2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSend2;
+        protected global::System.Web.UI.WebControls.Calendar graduacion1;
     }
 }

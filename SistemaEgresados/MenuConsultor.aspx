@@ -21,6 +21,16 @@
         <img src="Images/edit.png" height="18" width="45"/>
         <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/EditarDatos.aspx'">Actualizar Datos Personales</a>
     </div>
+    <br />
+    <div class="text-center">
+        <span class="glyphicon glyphicon-phone" ></span>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/Llamadas.aspx'">Registrar llamada</a>
+    </div>
+    <br />
+    <div class="text-center">
+        <span class="glyphicon glyphicon-eye-open" ></span>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/VerLlamadas.aspx'">Ver llamadas</a>
+    </div>
 </div>
 
 </asp:Content>
