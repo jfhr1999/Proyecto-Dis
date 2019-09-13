@@ -98,11 +98,11 @@ namespace SistemaEgresados
             conn.Open();
             da.Fill(dt);
 
-            dropDownCursos.DataSource = dt;
-            dropDownCursos.DataTextField = "nombreCurso";
-            dropDownCursos.DataValueField = "id";
+            dropDownCurso.DataSource = dt;
+            dropDownCurso.DataTextField = "nombreCurso";
+            dropDownCurso.DataValueField = "id";
 
-            dropDownCursos.DataBind();
+            dropDownCurso.DataBind();
 
             conn.Close();
 
@@ -110,10 +110,10 @@ namespace SistemaEgresados
 
         protected void dropDownCursos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string msg = dropDownCursos.SelectedItem.Text;
+            string msg = dropDownCurso.SelectedItem.Text;
             ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
 
-            Session["IdCurso"] = dropDownCursos.SelectedValue;
+            Session["IdCurso"] = dropDownCurso.SelectedValue;
         }
 
         protected void mostrarInfo(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace SistemaEgresados
             SqlCommand cmd = new SqlCommand("obtenerDatosBasicosDeCurso", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@id", SqlDbType.Int).Value = dropDownCursos.SelectedValue;
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = dropDownCurso.SelectedValue;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 

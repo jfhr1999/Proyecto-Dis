@@ -274,13 +274,13 @@ namespace SistemaEgresados {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// dropDownCursos control.
+        /// dropDownCurso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropDownCursos;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownCurso;
         
         /// <summary>
         /// btnSearch control.

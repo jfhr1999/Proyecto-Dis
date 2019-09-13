@@ -132,16 +132,16 @@
                         <label for="sel1">Seleccione un curso:</label>
                     </div>
                     <div class="col-auto">
-                        <asp:DropDownList CssClass="form-control" ID="dropDownCursos" runat="server" AppendDataBoundItems="true" OnSelectedIndexChanged="dropDownCursos_SelectedIndexChanged">
+                        <asp:DropDownList CssClass="form-control" ID="dropDownCurso" runat="server" AppendDataBoundItems="true" OnSelectedIndexChanged="dropDownCursos_SelectedIndexChanged">
                             <asp:ListItem Text="Por favor seleccione una opción" Value="0" />
                         </asp:DropDownList>
                         <script runat="server">
                             protected void dropDownCursos_SelectedIndexChanged(object sender, EventArgs e)
                             {
-                                string msg = dropDownCursos.SelectedItem.Text;
+                                string msg = dropDownCurso.SelectedItem.Text;
                                 ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
 
-                                Session["IdCurso"] = dropDownCursos.SelectedValue;
+                                Session["IdCurso"] = dropDownCurso.SelectedValue;
                             }
                         </script>
                     </div>
