@@ -191,6 +191,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActualizarCursos.aspx" />
     <Content Include="ActualizarTablas.aspx" />
     <Content Include="Administrar Usuarios.aspx" />
     <Content Include="ConsultarDatos.aspx" />
@@ -293,6 +294,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarCursos.aspx.cs">
+      <DependentUpon>ActualizarCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarCursos.aspx.designer.cs">
+      <DependentUpon>ActualizarCursos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarTablas.aspx.cs">
       <DependentUpon>ActualizarTablas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
