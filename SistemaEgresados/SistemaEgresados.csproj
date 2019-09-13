@@ -194,6 +194,7 @@
     <Content Include="ActualizarCursos.aspx" />
     <Content Include="ActualizarTablas.aspx" />
     <Content Include="Administrar Usuarios.aspx" />
+    <Content Include="AgregarEstudiante.aspx" />
     <Content Include="ConsultarDatos.aspx" />
     <Content Include="Consultas.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -314,6 +315,13 @@
     </Compile>
     <Compile Include="Administrar Usuarios.aspx.designer.cs">
       <DependentUpon>Administrar Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEstudiante.aspx.cs">
+      <DependentUpon>AgregarEstudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarEstudiante.aspx.designer.cs">
+      <DependentUpon>AgregarEstudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
