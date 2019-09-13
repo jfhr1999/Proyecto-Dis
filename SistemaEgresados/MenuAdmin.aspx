@@ -17,17 +17,22 @@
     </div>
     <br />
     <div class="text-center">
-        <img src="Images/lupa.png" height="20" width="30"/> &nbsp &nbsp
+        <img src="Images/edit.png" height="18" width="45"/>
+        <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/ActualizarCursos.aspx'">Manejar cursos</a>
+    </div>
+    <br />
+    <div class="text-center">
+        <img src="Images/lupa.png" height="20" width="25"/> &nbsp &nbsp
         <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/Consultas.aspx'">Consultar tablas actuales</a>
     </div>
     <br />
     <div class="text-center">
-        <img src="Images/person-8x.png" height="18" width="30"/>
+        <img src="Images/person-8x.png" height="18" width="25"/>
         <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/Administrar Usuarios.aspx'">Administrar usuarios</a>
     </div>
     <br />
     <div class="text-center">
-        <img src="Images/envelope-closed-8x.png" height="18" width="30"/>
+        <img src="Images/envelope-closed-8x.png" height="18" width="25"/>
         <a href="#" class="btn btn-secondary btn-lg" style="font-size:small" role="button" aria-pressed="true" onclick="window.location.href='/ManejarOfertasCursos.aspx'">Manejar ofertas de cursos</a>
     </div>
     <br />

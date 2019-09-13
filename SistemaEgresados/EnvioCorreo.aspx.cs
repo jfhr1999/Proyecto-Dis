@@ -216,6 +216,29 @@ namespace SistemaEgresados
 
 
                         smtp.Send(mail);
+
+
+                        SqlCommand cmd = new SqlCommand("agregarCursoOfertado", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@cedula", SqlDbType.Float).Value = 0;
+                        cmd.Parameters.Add("@idCurso", SqlDbType.Int).Value = Session["IdCurso"];
+                        cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Convert.ToDateTime(DateTime.Now);
+                        cmd.Parameters.Add("@comentarios", SqlDbType.VarChar, 200).Value = "";
+                        cmd.Parameters.Add("@medio", SqlDbType.VarChar, 50).Value = "CORREO";
+
+                        try
+                        {
+                            conn.Open();
+                            Int32 rowsAffected = cmd.ExecuteNonQuery();
+                            System.Diagnostics.Debug.WriteLine("RowsAffected: {0}", rowsAffected);
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.WriteLine(ex.Message);
+                        }
+                        conn.Close();
+                        //Response.Redirect("ActualizarCursos.aspx");
+
                     }
                 }
 
