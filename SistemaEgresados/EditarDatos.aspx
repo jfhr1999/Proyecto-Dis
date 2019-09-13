@@ -132,11 +132,11 @@
                         <label for="sel1">Seleccione un curso:</label>
                     </div>
                     <div class="col-auto">
-                        <asp:DropDownList CssClass="form-control" ID="dropDownCurso" runat="server" AppendDataBoundItems="true" OnSelectedIndexChanged="dropDownCursos_SelectedIndexChanged">
+                        <asp:DropDownList CssClass="form-control" ID="dropDownCurso" runat="server" AppendDataBoundItems="true" OnSelectedIndexChanged="dropDownCurso_SelectedIndexChanged">
                             <asp:ListItem Text="Por favor seleccione una opción" Value="0" />
                         </asp:DropDownList>
                         <script runat="server">
-                            protected void dropDownCursos_SelectedIndexChanged(object sender, EventArgs e)
+                            protected void dropDownCurso_SelectedIndexChanged(object sender, EventArgs e)
                             {
                                 string msg = dropDownCurso.SelectedItem.Text;
                                 ScriptManager.RegisterClientScriptBlock(sender as Control, this.GetType(), "alert", "alert('" + msg + "')", true);
@@ -151,7 +151,7 @@
                 </div>
             </ContentTemplate>
             <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="dropDownCursos" 
+                <asp:AsyncPostBackTrigger ControlID="dropDownCurso" 
                 EventName="SelectedIndexChanged" />
                 <%--<asp:AsyncPostBackTrigger ControlID="btnSearch"
                 EventName="mostrarInfo" />--%>
