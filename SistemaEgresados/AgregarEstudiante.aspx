@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
 
 <div class="container">
-     <br /><br /><br /><br /><br />
+     <%--<br /><br /><br /><br /><br />--%>
      <div style="background-color:#f5f5f5; padding:20px;">           
                         
         <div class="row">

@@ -10,7 +10,7 @@
 </asp:ScriptManager>
 
 <div class="container">
-    <br /><br /><br /><br />
+    <%--<br /><br /><br /><br />--%>
     
     <%--Label del titulo--%>
     <div class="text-center ">

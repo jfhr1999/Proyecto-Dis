@@ -33,54 +33,75 @@
 
 </head>
 <body>
-<nav class="navbar-fixed-top" style="background-color: #150E38">
-  <div class="container-fluid">
-      <%--Elementos de la izquierda del navbar--%>
-      <div class ="navbar-left" style="font-family: Arial, Helvetica, sans-serif; font-size: large; color: #FFFFFF"> <!--/A la izq del navbar -->
-          <div class="row">
-              <div class="col-12 mt-3">
-                <asp:Label ID="LabelSistemaGraduados" runat="server" Text="Sistema de graduados"></asp:Label>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-12 mt-2 mb-3">
-                  <asp:Label ID="LabelMaestriaGerenciaProyectos" runat="server" Text="Maestría en Gerencia de Proyectos"></asp:Label>
-              </div>
-          </div>
-
-        </div>
     
-      <%--Elementos del lado derecho del navbar--%>
-      <div class="navbar-right">
-          <div class="row justify-content-end">
-              <%--Imagen--%>
-              <div class="col-12 col-xs-9 col-sm-8">
-                <img alt="" class="auto-style2" src="Images/logoTec.JPG" />
-              </div>
-              
-              <%--Iconos de registrarse y salir--%>
-              <div class="col-12 col-xs-3 col-sm-4">
-                  <div class="row justify-content-end">
-                      <%--Registrarse--%>
-                      <div class="col-12 mt-3 mb-1">
-                        <a href="Registrarse.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-user" style="color: #FFFFFF"></span> Registrarse</a>
-                      </div>
-                      <%--Salir--%>
-                      <div class="col-12 mb-3">
-                        <a href="Default.aspx" style="color: #FFFFFF"><span class="glyphicon glyphicon-log-in" style="color: #FFFFFF"></span> Salir</a>
+    
+
+    <%--Boton home--%>
+    <form runat="server">
+        <%--Navbar--%>
+        <nav class="navbar-fixed-top" style="background-color: #150E38">
+          <div class="container-fluid">
+              <%--Elementos de la izquierda del navbar--%>
+              <div class ="navbar-left" style="font-family: Arial, Helvetica, sans-serif; font-size: large; color: #FFFFFF"> <!--/A la izq del navbar -->
+                  <div class="row">
+                      <div class="col-12 mt-3">
+                        <asp:Label ID="LabelSistemaGraduados" runat="server" Text="Sistema de graduados"></asp:Label>
                       </div>
                   </div>
-              </div>
-          </div>
-          
-      </div>
+                  <div class="row">
+                      <div class="col-12 mt-2 mb-3">
+                          <asp:Label ID="LabelMaestriaGerenciaProyectos" runat="server" Text="Maestría en Gerencia de Proyectos"></asp:Label>
+                      </div>
+                  </div>
 
-  </div>
-  <!--/.container-fluid -->
-</nav>
-    <form runat="server">
+                </div>
+    
+              <%--Elementos del lado derecho del navbar--%>
+              <div class="navbar-right">
+                  <div class="row justify-content-end">
+                      <%--Imagen--%>
+                      <div class="col-12 col-xs-9 col-sm-8">
+                        <img alt="" class="auto-style2" src="Images/logoTec.JPG" />
+                      </div>
+              
+                      <%--Iconos de registrarse y salir--%>
+                      <div class="col-12 col-xs-3 col-sm-4">
+                          <div class="row justify-content-end">
+                              <%--Registrarse--%>
+                              <div class="col-12 mt-3 mb-1">
+                                <asp:LinkButton ID="btnRegistrarse" runat="server" OnClick="registrarse" style="color: #FFFFFF">
+                                    <span class="glyphicon glyphicon-user" style="color: #FFFFFF"></span> Registrarse
+
+                                </asp:LinkButton>
+                              </div>
+                              <%--Salir--%>
+                              <div class="col-12 mb-3">
+                                  <%--Agregar una funcion en vez de solo redireccionamiento
+                                  Para poder completar la ejecucion del boton home--%>
+                                <asp:LinkButton ID="btnSalir" runat="server" OnClick="salir" style="color: #FFFFFF">
+                                    <span class="glyphicon glyphicon-log-in" style="color: #FFFFFF"></span> Salir
+
+                                </asp:LinkButton>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          
+              </div>
+
+          </div>
+          <!--/.container-fluid -->
+        </nav>
+
+        <br /><br /><br /><br />
+        <div class="container" style="text-align:left">
+            <asp:LinkButton ID="btnInicio" CssClass="btn btn-default btn-lg" runat="server" OnClick="irAInicio">
+                <span class="glyphicon glyphicon-home"></span> Inicio
+            </asp:LinkButton>
+        </div>
 
         &nbsp;<div class="container body-content">
+
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />

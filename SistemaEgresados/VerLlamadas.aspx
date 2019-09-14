@@ -6,7 +6,7 @@
 
 
     <div class="container">
-        <br /><br /><br /><br /><br />
+        <%--<br /><br /><br /><br /><br />--%>
         <div class="row" style="justify-content:center;background:#f5f5f5">
             <h1>Visualizacion de Llamadas</h1>
             <div class="col-md-12" style="justify-content:center">

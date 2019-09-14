@@ -12,7 +12,7 @@
         
     
         <div class="col-md-4">
-            <br /><br /><br />
+            <%--<br /><br /><br />--%>
             <link href="Content/LoginStyle.css" rel="stylesheet" type="text/css" />
                 <div class="wrapper fadeInDown">
                     <div id="formContent">
@@ -33,7 +33,7 @@
 
         <!-- Remind Passowrd -->
                     <div id="formFooter">
-                         <a class="underlineHover" href="RecuperarCuenta.aspx">¿Olvido su contraseña?</a>
+                         <a class="underlineHover" href="RecuperarCuenta.aspx">¿Olvidó su contraseña?</a>
                     </div>
 
                    

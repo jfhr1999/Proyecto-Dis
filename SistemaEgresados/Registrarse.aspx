@@ -15,7 +15,7 @@
         
     
         <div class="col-md-12">
-            <br /><br /><br />
+            <%--<br /><br /><br />--%>
 
             <link href="Content/LoginStyle.css" rel="stylesheet" type="text/css" />
                 <div class="wrapper fadeInDown">
@@ -25,20 +25,19 @@
                             Registrarse
                         </div>
 
-                    <form>
+                        <form>
                         
-                        <asp:TextBox ID="mail" placeholder="Correo" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="ID" placeholder="Identificación" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="password" type="password" autocomplete="off" placeholder="Contraseña" runat="server" ></asp:TextBox>
-                        <asp:Button ID="send" type="submit"  OnClick="Register_click" runat="server" CausesValidation="False" Text="Registrar" style="background-color: #150E38; color: #FFFFFF;" />
-                    </form>
-                    <h1></h1>
-                    
-      
+                            <asp:TextBox ID="mail" placeholder="Correo" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="ID" placeholder="Identificación" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="password" type="password" autocomplete="off" placeholder="Contraseña" runat="server" ></asp:TextBox>
+                            <asp:Button ID="send" type="submit"  OnClick="Register_click" runat="server" CausesValidation="False" Text="Registrar" style="background-color: #150E38; color: #FFFFFF;" />
+                        </form>
+
+                        <h1></h1>
 
                     </div>
                 </div>
-            </div>
+        </div>
             <!-- Central Modal Medium Danger -->
             <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2"
               aria-hidden="true">
@@ -62,6 +61,7 @@
               </div>
             </div>
  
+            <%--Modal ID no esta en el sistema--%>
             <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
@@ -84,6 +84,7 @@
               </div>
             </div>
 
+            <%--Modal clave al menos 8 caracteres--%>
             <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
@@ -106,6 +107,7 @@
               </div>
             </div>
             
+            <%--Modal ID solo debe contener numeros--%>
             <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
@@ -121,13 +123,14 @@
                   <!--Body-->
                   <div class="modal-body">
                     <div class="text-center" style="font-family:'Arial Black'">
-                      <p>La identificación solo debe contener numeros. Ej: 102345678</p>
+                      <p>La identificación solo debe contener números. Ej: 102345678</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             
+            <%--Modal cuenta con este ID ya existe--%>
             <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">
@@ -150,6 +153,7 @@
               </div>
             </div>
 
+            
             <div class="modal fade" id="modal1" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
               aria-hidden="true">
               <div class="modal-dialog modal-notify modal-danger" role="document">

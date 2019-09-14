@@ -11,7 +11,7 @@
         
     
         <div class="col-md-12">
-            <br /><br /><br />
+            <%--<br /><br /><br />--%>
 
             <link href="Content/LoginStyle.css" rel="stylesheet" type="text/css" />
                 <div class="wrapper fadeInDown">

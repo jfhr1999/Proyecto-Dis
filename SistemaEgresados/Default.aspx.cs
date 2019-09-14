@@ -46,14 +46,17 @@ namespace SistemaEgresados
 
             if (rol.Equals("admin"))                //Redirect de acuerdo al resultado
             {
+                Session["tipoUsuarioActual"] = "administrador";
                 Response.Redirect("MenuAdmin.aspx");
             }
             if (rol.Equals("consultor"))
             {
+                Session["tipoUsuarioActual"] = "consultor";
                 Response.Redirect("MenuConsultor.aspx");
             }
             if (rol.Equals("graduado"))
             {
+                Session["tipoUsuarioActual"] = "graduado";
                 Response.Redirect("MenuGraduado.aspx");
             }
 

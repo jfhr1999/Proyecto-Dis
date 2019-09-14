@@ -9,7 +9,7 @@
     <div class="container"> 
         <div class="row">
             <div class="col">
-                <br /><br /><br /><br />
+                <%--<br /><br /><br /><br />--%>
                 <asp:Label id="Label1" Text="Información Básica" runat="server" Width="210" Font-Size="XLarge"/>
                 <img src="Images/edit.png" height="18" width="45"/>
             </div>
