@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SistemaEgresados.ActualizarCursos" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIEyAAQUAUEBYAABQACBKksAAAQBAQAgQEAMAAKCTBI=</HashCode>
+      <FileName>ActualizarCursos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.ActualizarTablas" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>fCIAAgAAE4AAACARxAKEiAgBACQxgAJAgGANIQIABCI=</HashCode>
+      <FileName>ActualizarTablas.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.Administrar_Usuarios" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAIAQAAAAAAAAAAAAAQAAAQAAAAAAgIAEAE=</HashCode>
+      <FileName>Administrar Usuarios.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.AgregarEstudiante" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACKAZAlgAAAUAMECBACAQQgAQSAWgBQUAKIEIQAhY=</HashCode>
+      <FileName>AgregarEstudiante.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.BundleConfig" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.RouteConfig" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.ConsultarDatos" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.Consultas" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAQgAAAAABgACAAAAEBMAIAAQAAAAAAAAAAAIAQBI=</HashCode>
+      <FileName>Consultas.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados._Default" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgQAAAAAAAAAAAAAAAwAAAAAAAAAABICAAA=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.EditarDatos" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAgVAlgCJQQAMIAAACFhAAAQGAEAAUcACYAJCBAY=</HashCode>
+      <FileName>EditarDatos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.EnvioCorreo" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAYAAAABAAAEAIAAAsAAAAQAAQAAABAAAAIRQAA=</HashCode>
+      <FileName>EnvioCorreo.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.GestionCurso" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBAAAAAAAAACAAAAAAAgAAARAEAAAAAAAACIAAEA=</HashCode>
+      <FileName>GestionCurso.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.Global" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.Llamadas" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAgQQAIEAAACAAAAAAAQAAAAEAAAAABMAAAA=</HashCode>
+      <FileName>Llamadas.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.ManejarOfertasCursos" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gMAAAAEAAACBQABBQAAAgNBAAAQEAQBAYIAAQAIiBAI=</HashCode>
+      <FileName>ManejarOfertasCursos.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.MenuAdmin" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>MenuAdmin.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.MenuConsultor" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>MenuConsultor.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.MenuGraduado" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>MenuGraduado.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.RecuperarCuenta" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAIAAAAQAAAIAAAAAAAIAAEE=</HashCode>
+      <FileName>RecuperarCuenta.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.Registrarse" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAoAwAAAAAAAAAAEAAQABAAAAAAAAgIAEAk=</HashCode>
+      <FileName>Registrarse.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.SiteMaster" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAIAEACBCACAAAQAAAAAACAAAAAAIAAAA=</HashCode>
+      <FileName>Site.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.Site_Mobile" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAACAAAAAIAAAIAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Site.Mobile.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.VerLlamadas" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAgAAAAAAAAAAAIAAgAQAAAAAAAAAAAIAQAI=</HashCode>
+      <FileName>VerLlamadas.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SistemaEgresados.ViewSwitcher" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAIA=</HashCode>
+      <FileName>ViewSwitcher.ascx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
