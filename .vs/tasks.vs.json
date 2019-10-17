@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "tarea-app_code",
+      "appliesTo": "SistemaEgresados/app_code/",
+      "type": "launch"
+    },
+    {
+      "taskName": "tarea-Funcionalidad",
+      "appliesTo": "SistemaEgresados/App_code/Funcionalidad.cs",
+      "type": "launch"
+    }
+  ]
+}

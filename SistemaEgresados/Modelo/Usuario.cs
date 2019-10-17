@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 
 namespace SistemaEgresados.Modelo
+
 {
     public class Usuario
     {

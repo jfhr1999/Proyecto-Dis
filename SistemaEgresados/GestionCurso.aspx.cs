@@ -6,6 +6,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SistemaEgresados.Modelo;
+
+
+
+
 
 namespace SistemaEgresados
 {
@@ -15,6 +20,7 @@ namespace SistemaEgresados
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
         }
         protected void addCurso(object sender, EventArgs e)
